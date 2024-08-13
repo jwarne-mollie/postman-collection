@@ -6878,7 +6878,7 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "https://www.mollie.com/oauth2/authorize?client_id={{clientId}}&redirect_uri=https://example.com/mollie/connect_redirect.php&state={{$guid}}&scope=payments.read payments.write profiles.read profiles.write organizations.read onboarding.read onboarding.write payment-links.read payment-links.write orders.read orders.write subscriptions.read subscriptions.write customers.read customers.write mandates.read mandates.write shipments.read shipments.write settlements.read invoices.read refunds.read refunds.write balances.read &response_type=code&approval_prompt=auto&approval_prompt=force",
+									"raw": "https://my.mollie.com/oauth2/authorize?client_id={{clientId}}&redirect_uri=https://example.com/mollie/connect_redirect.php&state={{$guid}}&scope=payments.read payments.write profiles.read profiles.write organizations.read onboarding.read onboarding.write payment-links.read payment-links.write orders.read orders.write subscriptions.read subscriptions.write customers.read customers.write mandates.read mandates.write shipments.read shipments.write settlements.read invoices.read refunds.read refunds.write balances.read &response_type=code&approval_prompt=auto&approval_prompt=force",
 									"protocol": "https",
 									"host": [
 										"www",
