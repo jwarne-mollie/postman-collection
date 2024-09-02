@@ -28,7 +28,7 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n    \"amount\":\n    {\n        \"currency\":\"{{currency}}\",\n        \"value\":\"{{value}}\"\n    },\n    \"description\":\"{{description}}\",\n    \"redirectUrl\":\"{{redirectUrl}}\",\n    \"cancelUrl\":\"{{cancelUrl}}\",\n    \"webhookUrl\":\"{{webhookUrl}}\",\n    \"locale\":\"{{locale}}\",\n    \"method\":\"{{method}}\",\n    \"billingAddress\":\n    {\n        \"streetAndNumber\":\"{{billingAddress.postalCode}}\",\n        \"postalCode\":\"{{billingAddress.country}}\",\n        \"city\":\"{{billingAddress.citt}}\",\n        \"region\":\"{{billingAddress.region}}\",\n        \"country\":\"{{billingAddress.country}}\"\n    },\n    \"metadata\":\n    {\n        \"someProperty\":\"someValue\",\n        \"anotherProperty\":\"anotherValue\"\n    },\n}",
+									"raw": "{\n    \"amount\":\n    {\n        \"currency\":\"{{currency}}\",\n        \"value\":\"{{value}}\"\n    },\n    \"description\":\"{{description}}\",\n    \"redirectUrl\":\"{{redirectUrl}}\",\n    \"cancelUrl\":\"{{cancelUrl}}\",\n    \"webhookUrl\":\"{{webhookUrl}}\",\n    \"locale\":\"{{locale}}\",\n    \"method\":\"{{method}}\",\n    \"billingAddress\":\n    {\n        \"streetAndNumber\":\"{{billingAddress.postalCode}}\",\n        \"postalCode\":\"{{billingAddress.country}}\",\n        \"city\":\"{{billingAddress.citt}}\",\n        \"region\":\"{{billingAddress.region}}\",\n        \"country\":\"{{billingAddress.country}}\"\n    },\n    \"metadata\":\n    {\n        \"someProperty\":\"someValue\",\n        \"anotherProperty\":\"anotherValue\"\n    }\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -410,7 +410,7 @@
 										"header": [],
 										"body": {
 											"mode": "raw",
-											"raw": "{\n    \"amount\":\n    {\n        \"currency\":\"EUR\",\n        \"value\":\"10.00\"\n    },\n    \"description\":\"This is the description\",\n    \"redirectUrl\":\"https://example.com/redirect\",\n    \"webhookUrl\":\"https://example.com/webhook\",\n    \"locale\":\"nl_NL\",\n    \"method\":\"creditcard\",\n    \"billingAddress\":\n    {\n        \"streetAndNumber\":\"Keizersgracht 126\",\n        \"postalCode\":\"1234AB\",\n        \"city\":\"Amsterdam\",\n        \"region\":\"Noord-Holland\",\n        \"country\":\"NL\"\n    },\n    \"captureMode\":\"manual\"\n}",
+											"raw": "{\n    \"amount\":\n    {\n        \"currency\":\"EUR\",\n        \"value\":\"10.00\"\n    },\n    \"description\":\"This is the description\",\n    \"redirectUrl\":\"https://example.com/redirect\",\n    \"cancelUrl\":\"https://example.com/payment-cancelled\",\n    \"webhookUrl\":\"https://example.com/webhook\",\n    \"locale\":\"nl_NL\",\n    \"method\":\"creditcard\",\n    \"billingAddress\":\n    {\n        \"streetAndNumber\":\"Keizersgracht 126\",\n        \"postalCode\":\"1234AB\",\n        \"city\":\"Amsterdam\",\n        \"region\":\"Noord-Holland\",\n        \"country\":\"NL\"\n    },\n    \"captureMode\":\"manual\"\n}",
 											"options": {
 												"raw": {
 													"language": "json"
@@ -476,7 +476,7 @@
 										"header": [],
 										"body": {
 											"mode": "raw",
-											"raw": "{\n    \"amount\":\n    {\n        \"currency\":\"EUR\",\n        \"value\":\"10.00\"\n    },\n    \"description\":\"This is the description\",\n    \"redirectUrl\":\"https://example.com/redirect\",\n    \"webhookUrl\":\"https://example.com/webhook\",\n    \"locale\":\"nl_NL\",\n    \"method\":\"creditcard\",\n    \"billingAddress\":\n    {\n        \"streetAndNumber\":\"Keizersgracht 126\",\n        \"postalCode\":\"1234AB\",\n        \"city\":\"Amsterdam\",\n        \"region\":\"Noord-Holland\",\n        \"country\":\"NL\"\n    },\n    \"captureDelay\":\"2 days\"\n}",
+											"raw": "{\n    \"amount\":\n    {\n        \"currency\":\"EUR\",\n        \"value\":\"10.00\"\n    },\n    \"description\":\"This is the description\",\n    \"redirectUrl\":\"https://example.com/redirect\",\n    \"cancelUrl\":\"https://example.com/payment-cancelled\",\n    \"webhookUrl\":\"https://example.com/webhook\",\n    \"locale\":\"nl_NL\",\n    \"method\":\"creditcard\",\n    \"billingAddress\":\n    {\n        \"streetAndNumber\":\"Keizersgracht 126\",\n        \"postalCode\":\"1234AB\",\n        \"city\":\"Amsterdam\",\n        \"region\":\"Noord-Holland\",\n        \"country\":\"NL\"\n    },\n    \"captureDelay\":\"2 days\"\n}",
 											"options": {
 												"raw": {
 													"language": "json"
