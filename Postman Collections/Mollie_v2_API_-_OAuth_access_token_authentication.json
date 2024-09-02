@@ -35,7 +35,7 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n    \"amount\":\n    {\n        \"currency\":\"{{currency}}\",\n        \"value\":\"{{value}}\"\n    },\n    \"description\":\"{{description}}\",\n    \"redirectUrl\":\"{{redirectUrl}}\",\n    \"cancelUrl\":\"{{cancelUrl}}\",\n    \"webhookUrl\":\"{{webhookUrl}}\",\n    \"locale\":\"{{locale}}\",\n    \"method\":\"{{method}}\",\n    \"profileId\":\"{{profileId}}\",\n    \"restrictPaymentMethodsToCountry\":\"{{restrictPaymentMethodsToCountry}}\",\n    \"billingAddress\":\n    {\n        \"streetAndNumber\":\"{{billingAddress.postalCode}}\",\n        \"postalCode\":\"{{billingAddress.country}}\",\n        \"city\":\"{{billingAddress.citt}}\",\n        \"region\":\"{{billingAddress.region}}\",\n        \"country\":\"{{billingAddress.country}}\"\n    },\n    \"metadata\":\n    {\n        \"someProperty\":\"someValue\",\n        \"anotherProperty\":\"anotherValue\"\n    },\n    \"testmode\":true\n}",
+									"raw": "{\n    \"amount\":\n    {\n        \"currency\":\"{{currency}}\",\n        \"value\":\"{{value}}\"\n    },\n    \"description\":\"{{description}}\",\n    \"redirectUrl\":\"{{redirectUrl}}\",\n    \"cancelUrl\":\"{{cancelUrl}}\",\n    \"webhookUrl\":\"{{webhookUrl}}\",\n    \"locale\":\"{{locale}}\",\n    \"method\":\"{{method}}\",\n    \"profileId\":\"{{profileId}}\",\n    \"billingAddress\":\n    {\n        \"streetAndNumber\":\"{{billingAddress.postalCode}}\",\n        \"postalCode\":\"{{billingAddress.country}}\",\n        \"city\":\"{{billingAddress.citt}}\",\n        \"region\":\"{{billingAddress.region}}\",\n        \"country\":\"{{billingAddress.country}}\"\n    },\n    \"metadata\":\n    {\n        \"someProperty\":\"someValue\",\n        \"anotherProperty\":\"anotherValue\"\n    },\n    \"testmode\":true\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -9809,21 +9809,21 @@
 		{
 			"listen": "prerequest",
 			"script": {
+				"id": "a53ee226-3d1e-431b-a58f-b4e2a056004d",
 				"type": "text/javascript",
 				"exec": [
 					""
-				],
-				"id": "32d8f3e1-e7bd-4fef-a6c6-ba1a17e24d19"
+				]
 			}
 		},
 		{
 			"listen": "test",
 			"script": {
+				"id": "bbba7379-0aa2-453b-a6f1-57dcff2722ff",
 				"type": "text/javascript",
 				"exec": [
 					""
-				],
-				"id": "0c2b23ab-9593-4dcc-b33d-e4e7ffa38e30"
+				]
 			}
 		}
 	],
@@ -9876,6 +9876,11 @@
 		{
 			"key": "redirectUrl",
 			"value": "https://example.com/landing_page"
+		},
+		{
+			"key": "cancelUrl",
+			"value": "",
+			"type": "string"
 		},
 		{
 			"key": "webhookUrl",
