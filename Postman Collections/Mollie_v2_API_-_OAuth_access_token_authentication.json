@@ -1743,6 +1743,371 @@
 									"body": "{\n    \"resource\": \"method\",\n    \"id\": \"ideal\",\n    \"description\": \"iDEAL\",\n    \"minimumAmount\": {\n        \"value\": \"0.01\",\n        \"currency\": \"EUR\"\n    },\n    \"maximumAmount\": {\n        \"value\": \"50000.00\",\n        \"currency\": \"EUR\"\n    },\n    \"image\": {\n        \"size1x\": \"https://www.mollie.com/external/icons/payment-methods/ideal.png\",\n        \"size2x\": \"https://www.mollie.com/external/icons/payment-methods/ideal%402x.png\",\n        \"svg\": \"https://www.mollie.com/external/icons/payment-methods/ideal.svg\"\n    },\n    \"status\": \"activated\",\n    \"pricing\": [\n        {\n            \"description\": \"Netherlands\",\n            \"fixed\": {\n                \"value\": \"0.29\",\n                \"currency\": \"EUR\"\n            },\n            \"variable\": \"0\"\n        }\n    ],\n    \"_links\": {\n        \"self\": {\n            \"href\": \"https://api.mollie.com/v2/methods/ideal?include=pricing\",\n            \"type\": \"application/hal+json\"\n        },\n        \"documentation\": {\n            \"href\": \"https://docs.mollie.com/reference/v2/methods-api/get-method\",\n            \"type\": \"text/html\"\n        }\n    }\n}"
 								}
 							]
+						},
+						{
+							"name": "Enable payment method Copy",
+							"id": "4585f251-ffd5-46a7-b1e7-3afc6d44051c",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "POST",
+								"header": [],
+								"url": "{{apiUrl}}/profiles/pfl_2q3RyuMGry/methods/*id*"
+							},
+							"response": [
+								{
+									"id": "5c12c420-defd-4312-ba61-21031f4bbd9c",
+									"name": "Enable creditcard payment method",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"url": "{{apiUrl}}/profiles/pfl_2q3RyuMGry/methods/creditcard"
+									},
+									"status": "Created",
+									"code": 201,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Server",
+											"value": "nginx"
+										},
+										{
+											"key": "Date",
+											"value": "Wed, 19 Jan 2022 12:38:42 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/hal+json"
+										},
+										{
+											"key": "Content-Length",
+											"value": "661"
+										},
+										{
+											"key": "X-Robots-Tag",
+											"value": "noindex"
+										},
+										{
+											"key": "Strict-Transport-Security",
+											"value": "max-age=31536000; includeSubDomains; preload"
+										}
+									],
+									"cookie": [],
+									"responseTime": null,
+									"body": "{\n    \"resource\": \"method\",\n    \"id\": \"creditcard\",\n    \"description\": \"Credit card\",\n    \"minimumAmount\": {\n        \"value\": \"0.01\",\n        \"currency\": \"EUR\"\n    },\n    \"maximumAmount\": {\n        \"value\": \"500.00\",\n        \"currency\": \"EUR\"\n    },\n    \"image\": {\n        \"size1x\": \"https://www.mollie.com/external/icons/payment-methods/creditcard.png\",\n        \"size2x\": \"https://www.mollie.com/external/icons/payment-methods/creditcard%402x.png\",\n        \"svg\": \"https://www.mollie.com/external/icons/payment-methods/creditcard.svg\"\n    },\n    \"status\": \"pending-review\",\n    \"_links\": {\n        \"self\": {\n            \"href\": \"https://api.mollie.com/v2/methods/creditcard\",\n            \"type\": \"application/hal+json\"\n        },\n        \"documentation\": {\n            \"href\": \"https://docs.mollie.com/reference/v2/profiles-api/enable-method\",\n            \"type\": \"text/html\"\n        }\n    }\n}"
+								},
+								{
+									"id": "ddfb4d88-42b3-46a2-996c-a00205ff3e28",
+									"name": "Enable ideal payment method",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"url": "{{apiUrl}}/profiles/pfl_2q3RyuMGry/methods/ideal"
+									},
+									"status": "Created",
+									"code": 201,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Server",
+											"value": "nginx"
+										},
+										{
+											"key": "Date",
+											"value": "Wed, 19 Jan 2022 12:39:03 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/hal+json"
+										},
+										{
+											"key": "Content-Length",
+											"value": "632"
+										},
+										{
+											"key": "X-Robots-Tag",
+											"value": "noindex"
+										},
+										{
+											"key": "Strict-Transport-Security",
+											"value": "max-age=31536000; includeSubDomains; preload"
+										}
+									],
+									"cookie": [],
+									"responseTime": null,
+									"body": "{\n    \"resource\": \"method\",\n    \"id\": \"ideal\",\n    \"description\": \"iDEAL\",\n    \"minimumAmount\": {\n        \"value\": \"0.01\",\n        \"currency\": \"EUR\"\n    },\n    \"maximumAmount\": {\n        \"value\": \"50000.00\",\n        \"currency\": \"EUR\"\n    },\n    \"image\": {\n        \"size1x\": \"https://www.mollie.com/external/icons/payment-methods/ideal.png\",\n        \"size2x\": \"https://www.mollie.com/external/icons/payment-methods/ideal%402x.png\",\n        \"svg\": \"https://www.mollie.com/external/icons/payment-methods/ideal.svg\"\n    },\n    \"status\": \"pending-review\",\n    \"_links\": {\n        \"self\": {\n            \"href\": \"https://api.mollie.com/v2/methods/ideal\",\n            \"type\": \"application/hal+json\"\n        },\n        \"documentation\": {\n            \"href\": \"https://docs.mollie.com/reference/v2/profiles-api/enable-method\",\n            \"type\": \"text/html\"\n        }\n    }\n}"
+								}
+							]
+						},
+						{
+							"name": "Enable payment method Copy 2",
+							"id": "a48bcd8b-b1d4-4a2a-a443-5955e700c719",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": "{{apiUrl}}/profiles/pfl_2q3RyuMGry/methods/*id*"
+							},
+							"response": [
+								{
+									"id": "87088189-044c-4d87-bce5-5137ec499e3b",
+									"name": "Disable creditcard payment method",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [],
+										"url": "{{apiUrl}}/profiles/pfl_2q3RyuMGry/methods/creditcard"
+									},
+									"status": "No Content",
+									"code": 204,
+									"_postman_previewlanguage": "plain",
+									"header": [
+										{
+											"key": "Server",
+											"value": "nginx"
+										},
+										{
+											"key": "Date",
+											"value": "Wed, 19 Jan 2022 12:39:57 GMT"
+										},
+										{
+											"key": "X-Robots-Tag",
+											"value": "noindex"
+										},
+										{
+											"key": "Strict-Transport-Security",
+											"value": "max-age=31536000; includeSubDomains; preload"
+										}
+									],
+									"cookie": [],
+									"responseTime": null,
+									"body": ""
+								}
+							]
+						},
+						{
+							"name": "Enable gift card issuer Copy",
+							"id": "3f570c68-a9fb-460e-8350-4d5906659fd8",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "POST",
+								"header": [],
+								"url": "{{apiUrl}}/profiles/pfl_2q3RyuMGry/methods/giftcard/issuers/*id*"
+							},
+							"response": [
+								{
+									"id": "4b3cae9a-3d57-4730-bdad-c5e4039ae244",
+									"name": "Enable festivalkado giftcard payment method",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"url": "{{apiUrl}}/profiles/pfl_2q3RyuMGry/methods/giftcard/issuers/festivalcadeau"
+									},
+									"status": "Created",
+									"code": 201,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Server",
+											"value": "nginx"
+										},
+										{
+											"key": "Date",
+											"value": "Wed, 19 Jan 2022 12:41:46 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/hal+json"
+										},
+										{
+											"key": "Content-Length",
+											"value": "335"
+										},
+										{
+											"key": "X-Robots-Tag",
+											"value": "noindex"
+										},
+										{
+											"key": "Strict-Transport-Security",
+											"value": "max-age=31536000; includeSubDomains; preload"
+										}
+									],
+									"cookie": [],
+									"responseTime": null,
+									"body": "{\n    \"resource\": \"issuer\",\n    \"id\": \"festivalcadeau\",\n    \"description\": \"FestivalCadeau Giftcard\",\n    \"status\": \"pending-issuer\",\n    \"_links\": {\n        \"self\": {\n            \"href\": \"https://api.mollie.com/v2/issuer/festivalcadeau\",\n            \"type\": \"application/hal+json\"\n        },\n        \"documentation\": {\n            \"href\": \"https://docs.mollie.com/reference/v2/profiles-api/enable-giftcard-issuer\",\n            \"type\": \"text/html\"\n        }\n    }\n}"
+								}
+							]
+						},
+						{
+							"name": "Enable gift card issuer Copy 2",
+							"id": "f5ff3d42-7020-4cce-a4be-267fb5072ac0",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": "{{apiUrl}}/profiles/pfl_2q3RyuMGry/methods/giftcard/issuers/*id*"
+							},
+							"response": [
+								{
+									"id": "34bfb0c5-dc94-46bd-b02d-497d0e9c9841",
+									"name": "Disable festivalkado giftcard payment method",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [],
+										"url": "{{apiUrl}}/profiles/pfl_2q3RyuMGry/methods/giftcard/issuers/festivalcadeau"
+									},
+									"status": "No Content",
+									"code": 204,
+									"_postman_previewlanguage": "plain",
+									"header": [
+										{
+											"key": "Server",
+											"value": "nginx"
+										},
+										{
+											"key": "Date",
+											"value": "Wed, 19 Jan 2022 12:42:23 GMT"
+										},
+										{
+											"key": "X-Robots-Tag",
+											"value": "noindex"
+										},
+										{
+											"key": "Strict-Transport-Security",
+											"value": "max-age=31536000; includeSubDomains; preload"
+										}
+									],
+									"cookie": [],
+									"responseTime": null,
+									"body": ""
+								}
+							]
+						},
+						{
+							"name": "Enable voucher issuer Copy",
+							"id": "e72c897a-f567-4e8b-a819-351858d8125c",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"contractId\":\"abc123\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{apiUrl}}/profiles/pfl_2q3RyuMGry/methods/voucher/issuers/*id*"
+							},
+							"response": [
+								{
+									"id": "a4f6c90d-22a1-44a1-8a6f-f65ec77a68bf",
+									"name": "Enable appetiz vouchers",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"contractId\":\"abc123\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": "{{apiUrl}}/profiles/pfl_2q3RyuMGry/methods/voucher/issuers/appetiz"
+									},
+									"status": "Created",
+									"code": 201,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Server",
+											"value": "nginx"
+										},
+										{
+											"key": "Date",
+											"value": "Wed, 19 Jan 2022 12:45:23 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/hal+json"
+										},
+										{
+											"key": "Content-Length",
+											"value": "608"
+										},
+										{
+											"key": "X-Robots-Tag",
+											"value": "noindex"
+										},
+										{
+											"key": "Strict-Transport-Security",
+											"value": "max-age=31536000; includeSubDomains; preload"
+										}
+									],
+									"cookie": [],
+									"responseTime": null,
+									"body": "{\n    \"resource\": \"issuer\",\n    \"id\": \"appetiz\",\n    \"name\": \"Appetiz\",\n    \"image\": {\n        \"size1x\": \"https://www.mollie.com/external/icons/voucher-issuers/appetiz.png\",\n        \"size2x\": \"https://www.mollie.com/external/icons/voucher-issuers/appetiz%402x.png\",\n        \"svg\": \"https://www.mollie.com/external/icons/voucher-issuers/appetiz.svg\"\n    },\n    \"status\": \"pending-issuer\",\n    \"contractor\": {\n        \"id\": \"Conecs\",\n        \"name\": \"Conecs\",\n        \"contractId\": \"abc123\"\n    },\n    \"_links\": {\n        \"self\": {\n            \"href\": \"https://api.mollie.com/v2/issuers/appetiz\",\n            \"type\": \"application/hal+json\"\n        },\n        \"documentation\": {\n            \"href\": \"https://docs.mollie.com/reference/v2/profiles-api/enable-voucher-issuer\",\n            \"type\": \"text/html\"\n        }\n    }\n}"
+								}
+							]
+						},
+						{
+							"name": "Enable voucher issuer Copy 2",
+							"id": "27e2c3a4-c046-4794-b990-fbc9467ba0c8",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": "{{apiUrl}}/profiles/pfl_2q3RyuMGry/methods/voucher/issuers/*id*"
+							},
+							"response": [
+								{
+									"id": "b3cc24c8-8aad-4037-bc79-194803971e8e",
+									"name": "Delete appetiz voucher payment method",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [],
+										"url": "{{apiUrl}}/profiles/pfl_2q3RyuMGry/methods/voucher/issuers/appetiz"
+									},
+									"status": "No Content",
+									"code": 204,
+									"_postman_previewlanguage": "plain",
+									"header": [
+										{
+											"key": "Server",
+											"value": "nginx"
+										},
+										{
+											"key": "Date",
+											"value": "Wed, 19 Jan 2022 12:46:13 GMT"
+										},
+										{
+											"key": "X-Robots-Tag",
+											"value": "noindex"
+										},
+										{
+											"key": "Strict-Transport-Security",
+											"value": "max-age=31536000; includeSubDomains; preload"
+										}
+									],
+									"cookie": [],
+									"responseTime": null,
+									"body": ""
+								}
+							]
 						}
 					],
 					"id": "979f7d6f-8a20-471c-8963-0cedd6bf8d7b"
@@ -6841,6 +7206,105 @@
 								"url": "https://api.mollie.com/oauth2/tokens"
 							},
 							"response": []
+						},
+						{
+							"name": "Refresh tokens Copy",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "3f0676a5-caa0-47e1-8064-c00bb3f04f54",
+										"exec": [
+											"const response = pm.response.json();",
+											"pm.environment.set(\"accessToken\", response.access_token);"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"id": "eb7bb475-3745-4dde-924e-4039ac528ebe",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"refresh_token\":\"{{refreshToken}}\",\n    \"grant_type\":\"refresh_token\",\n    \"redirect_uri\":\"https://example.com/mollie/connect_redirect.php\"\n}\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "https://api.mollie.com/oauth2/tokens"
+							},
+							"response": [
+								{
+									"id": "756a1e1e-e3d7-4d98-aea8-7bf8de0781c7",
+									"name": "Refresh token",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"refresh_token\":\"refresh_***\",\n    \"grant_type\":\"refresh_token\",\n    \"redirect_uri\":\"https://example.com/mollie/connect_redirect.php\"\n\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": "https://api.mollie.com/oauth2/tokens"
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Server",
+											"value": "nginx"
+										},
+										{
+											"key": "Date",
+											"value": "Fri, 07 Jan 2022 12:29:34 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Vary",
+											"value": "Accept-Encoding"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-store"
+										},
+										{
+											"key": "Pragma",
+											"value": "no-cache"
+										},
+										{
+											"key": "Content-Encoding",
+											"value": "gzip"
+										},
+										{
+											"key": "Strict-Transport-Security",
+											"value": "max-age=31536000; includeSubDomains; preload"
+										}
+									],
+									"cookie": [],
+									"responseTime": null,
+									"body": "{\n    \"access_token\": \"access_***\",\n    \"expires_in\": 3600,\n    \"token_type\": \"bearer\",\n    \"scope\": \"payments.read payments.write profiles.read\",\n    \"refresh_token\": \"refresh_***\"\n}"
+								}
+							]
 						}
 					],
 					"id": "0e508cb8-8024-45a8-84a2-611152bee33f",
