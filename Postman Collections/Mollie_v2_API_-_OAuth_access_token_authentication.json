@@ -7049,7 +7049,7 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n    \"refresh_token\":\"{{refresh_token}}\",\n    \"grant_type\":\"refresh_token\",\n    \"redirect_uri\":\"https://example.com/mollie/connect_redirect.php\"\n}\n",
+									"raw": "{\n    \"code\":\"auth_***\",\n    \"grant_type\":\"authorization_code\",\n    \"redirect_uri\":\"https://example.com/mollie/connect_redirect.php\"\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -7061,7 +7061,7 @@
 							"response": [
 								{
 									"id": "3a7e2866-8a59-4dd3-9f30-907204ffc205",
-									"name": "Get access token",
+									"name": "Generate tokens",
 									"originalRequest": {
 										"method": "POST",
 										"header": [],
@@ -7123,7 +7123,7 @@
 								},
 								{
 									"id": "f0429936-677f-48c5-9413-e16009cea3e3",
-									"name": "Refresh token",
+									"name": "Refresh access token",
 									"originalRequest": {
 										"method": "POST",
 										"header": [],
