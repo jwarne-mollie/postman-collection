@@ -24,7 +24,7 @@
 										"token": "{{access_token}}"
 									}
 								},
-								"method": "GET",
+								"method": "POST",
 								"header": [],
 								"body": {
 									"mode": "raw",
@@ -35,7 +35,7 @@
 										}
 									}
 								},
-								"url": ""
+								"url": "{{apiUrl}}/payments"
 							},
 							"response": [
 								{
@@ -96,7 +96,7 @@
 										"header": [],
 										"body": {
 											"mode": "raw",
-											"raw": "{\n    \"amount\":\n    {\n        \"currency\":\"EUR\",\n        \"value\":\"10.00\"\n    },\n    \"description\":\"This is the description of the payment\",\n    \"redirectUrl\":\"https://example.com/redirect\",\n    \"webhookUrl\":\"https://example.com/webhook\",\n    \"method\":\"ideal\",\n    \"issuer\":\"ideal_RABONL2U\"\n}",
+											"raw": "{\n    \"amount\":\n    {\n        \"currency\":\"EUR\",\n        \"value\":\"10.00\"\n    },\n    \"description\":\"This is the description of the payment\",\n    \"redirectUrl\":\"https://example.com/redirect\",\n    \"cancelUrl\":\"https://example.com/payment-cancelled\",\n    \"webhookUrl\":\"https://example.com/webhook\",\n    \"method\":\"ideal\",\n    \"issuer\":\"ideal_RABONL2U\"\n}",
 											"options": {
 												"raw": {
 													"language": "json"
@@ -146,7 +146,7 @@
 										"header": [],
 										"body": {
 											"mode": "raw",
-											"raw": "{\n    \"amount\":\n    {\n        \"currency\":\"EUR\",\n        \"value\":\"10.00\"\n    },\n    \"description\":\"This is the description\",\n    \"redirectUrl\":\"https://example.com/redirect\",\n    \"webhookUrl\":\"https://example.com/webhook\",\n    \"locale\":\"nl_NL\",\n    \"method\":\"creditcard\",\n    \"billingAddress\":\n    {\n        \"streetAndNumber\":\"Keizersgracht 126\",\n        \"postalCode\":\"1234AB\",\n        \"city\":\"Amsterdam\",\n        \"region\":\"Noord-Holland\",\n        \"country\":\"NL\"\n    }\n}",
+											"raw": "{\n    \"amount\":\n    {\n        \"currency\":\"EUR\",\n        \"value\":\"10.00\"\n    },\n    \"description\":\"This is the description\",\n    \"redirectUrl\":\"https://example.com/redirect\",\n    \"cancelUrl\":\"https://example.com/payment-cancelled\",\n    \"webhookUrl\":\"https://example.com/webhook\",\n    \"locale\":\"nl_NL\",\n    \"method\":\"creditcard\",\n    \"billingAddress\":\n    {\n        \"streetAndNumber\":\"Keizersgracht 126\",\n        \"postalCode\":\"1234AB\",\n        \"city\":\"Amsterdam\",\n        \"region\":\"Noord-Holland\",\n        \"country\":\"NL\"\n    }\n}",
 											"options": {
 												"raw": {
 													"language": "json"
@@ -196,7 +196,7 @@
 										"header": [],
 										"body": {
 											"mode": "raw",
-											"raw": "{\n    \"amount\":\n    {\n        \"currency\":\"EUR\",\n        \"value\":\"10.00\"\n    },\n    \"description\":\"This is the description Order ABS123\",\n    \"redirectUrl\":\"https://example.com/redirect\",\n    \"webhookUrl\":\"https://example.com/webhook\",\n    \"locale\":\"nl_NL\",\n    \"method\":\"paypal\",\n    \"digitalGoods\":false,\n   \"shippingAddress\":{\n      \"streetAndNumber\":\"{{shippingAddress.streetAndNumber}}\",\n      \"streetAdditional\":\"{{shippingAddress.streetAdditional}}\",\n      \"city\":\"{{shippingAddress.city}}\",\n      \"region\":\"{{shippingAddress.region}}\",\n      \"postalCode\":\"{{shippingAddress.postalCode}}\",\n      \"country\":\"{{shippingAddress.country}}\",\n      \"givenName\":\"{{shippingAddress.givenName}}\",\n      \"familyName\":\"{{shippingAddress.familyName}}\"\n   }\n}",
+											"raw": "{\n    \"amount\":\n    {\n        \"currency\":\"EUR\",\n        \"value\":\"10.00\"\n    },\n    \"description\":\"This is the description Order ABS123\",\n    \"redirectUrl\":\"https://example.com/redirect\",\n    \"cancelUrl\":\"https://example.com/payment-cancelled\",\n    \"webhookUrl\":\"https://example.com/webhook\",\n    \"locale\":\"nl_NL\",\n    \"method\":\"paypal\",\n    \"digitalGoods\":false,\n   \"shippingAddress\":{\n      \"streetAndNumber\":\"{{shippingAddress.streetAndNumber}}\",\n      \"streetAdditional\":\"{{shippingAddress.streetAdditional}}\",\n      \"city\":\"{{shippingAddress.city}}\",\n      \"region\":\"{{shippingAddress.region}}\",\n      \"postalCode\":\"{{shippingAddress.postalCode}}\",\n      \"country\":\"{{shippingAddress.country}}\",\n      \"givenName\":\"{{shippingAddress.givenName}}\",\n      \"familyName\":\"{{shippingAddress.familyName}}\"\n   }\n}",
 											"options": {
 												"raw": {
 													"language": "json"
@@ -246,7 +246,7 @@
 										"header": [],
 										"body": {
 											"mode": "raw",
-											"raw": "{\n    \"amount\":\n    {\n        \"currency\":\"EUR\",\n        \"value\":\"10.00\"\n    },\n    \"description\":\"This is the description of the payment\",\n    \"redirectUrl\":\"https://example.com/redirect\",\n    \"webhookUrl\":\"https://example.com/webhook\",\n    \"method\":\"ideal\"\n}",
+											"raw": "{\n    \"amount\":\n    {\n        \"currency\":\"EUR\",\n        \"value\":\"10.00\"\n    },\n    \"description\":\"This is the description of the payment\",\n    \"redirectUrl\":\"https://example.com/redirect\",\n    \"cancelUrl\":\"https://example.com/payment-cancelled\",\n    \"webhookUrl\":\"https://example.com/webhook\",\n    \"method\":\"ideal\"\n}",
 											"options": {
 												"raw": {
 													"language": "json"
@@ -310,7 +310,7 @@
 										"header": [],
 										"body": {
 											"mode": "raw",
-											"raw": "{\n    \"amount\":\n    {\n        \"currency\":\"EUR\",\n        \"value\":\"0.00\"\n    },\n    \"description\":\"Direct debit charge as recuring payment\",\n    \"webhookUrl\":\"https://example.com/webhook\",\n    \"redirectUrl\":\"https://example.com/redirect\",\n    \"locale\":\"en_US\",\n    \"method\":\"creditcard\",\n    \"sequenceType\":\"first\",\n    \"customerId\":\"cst_tKt44u85MM\",\n    \"metadata\":\n    {\n        \"someProperty\":\"someValue\",\n        \"anotherProperty\":\"anotherValue\"\n    }\n}",
+											"raw": "{\n    \"amount\":\n    {\n        \"currency\":\"EUR\",\n        \"value\":\"0.00\"\n    },\n    \"description\":\"Direct debit charge as recuring payment\",\n    \"redirectUrl\":\"https://example.com/redirect\",\n    \"cancelUrl\":\"https://example.com/payment-cancelled\",\n    \"webhookUrl\":\"https://example.com/webhook\",\n    \"locale\":\"en_US\",\n    \"method\":\"creditcard\",\n    \"sequenceType\":\"first\",\n    \"customerId\":\"cst_tKt44u85MM\",\n    \"metadata\":\n    {\n        \"someProperty\":\"someValue\",\n        \"anotherProperty\":\"anotherValue\"\n    }\n}",
 											"options": {
 												"raw": {
 													"language": "json"
@@ -779,11 +779,12 @@
 								{
 									"listen": "prerequest",
 									"script": {
+										"id": "f4dc4128-b041-461e-b527-4968d0f00e95",
 										"exec": [
 											""
 										],
 										"type": "text/javascript",
-										"id": "f4dc4128-b041-461e-b527-4968d0f00e95"
+										"packages": {}
 									}
 								}
 							],
@@ -796,7 +797,7 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n    \"description\":\"{{description}}\",\n    \"redirectUrl\":\"{{redirectUrl}}\",\n    \"webhookUrl\":\"{{webhookUrl}}\",\n    \"locale\":\"{{locale}}\",\n    \"method\":\"{{method}}\",\n    \"restrictPaymentMethodsToCountry\":\"{{restrictPaymentMethodsToCountry}}\",\n    \"metadata\":\n    {\n        \"someProperty\":\"someValue\",\n        \"anotherProperty\":\"anotherValue\"\n    }\n}",
+									"raw": "{\n    \"description\":\"{{description}}\",\n    \"redirectUrl\":\"{{redirectUrl}}\",\n    \"webhookUrl\":\"{{webhookUrl}}\",\n    \"locale\":\"{{locale}}\",\n    \"method\":\"{{method}}\",\n    \"metadata\":\n    {\n        \"someProperty\":\"someValue\",\n        \"anotherProperty\":\"anotherValue\"\n    }\n}",
 									"options": {
 										"raw": {
 											"language": "json"
