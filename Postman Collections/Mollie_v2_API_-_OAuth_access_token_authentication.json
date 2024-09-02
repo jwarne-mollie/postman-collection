@@ -1745,7 +1745,7 @@
 							]
 						},
 						{
-							"name": "Enable payment method Copy",
+							"name": "Enable payment method",
 							"id": "4585f251-ffd5-46a7-b1e7-3afc6d44051c",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
