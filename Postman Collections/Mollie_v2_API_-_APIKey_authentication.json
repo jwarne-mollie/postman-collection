@@ -1789,6 +1789,19 @@
 									"body": "{\n    \"resource\": \"method\",\n    \"id\": \"ideal\",\n    \"description\": \"iDEAL\",\n    \"minimumAmount\": {\n        \"value\": \"0.01\",\n        \"currency\": \"EUR\"\n    },\n    \"maximumAmount\": {\n        \"value\": \"50000.00\",\n        \"currency\": \"EUR\"\n    },\n    \"image\": {\n        \"size1x\": \"https://www.mollie.com/external/icons/payment-methods/ideal.png\",\n        \"size2x\": \"https://www.mollie.com/external/icons/payment-methods/ideal%402x.png\",\n        \"svg\": \"https://www.mollie.com/external/icons/payment-methods/ideal.svg\"\n    },\n    \"status\": \"activated\",\n    \"pricing\": [\n        {\n            \"description\": \"Netherlands\",\n            \"fixed\": {\n                \"value\": \"0.29\",\n                \"currency\": \"EUR\"\n            },\n            \"variable\": \"0\"\n        }\n    ],\n    \"_links\": {\n        \"self\": {\n            \"href\": \"https://api.mollie.com/v2/methods/ideal?include=pricing\",\n            \"type\": \"application/hal+json\"\n        },\n        \"documentation\": {\n            \"href\": \"https://docs.mollie.com/reference/v2/methods-api/get-method\",\n            \"type\": \"text/html\"\n        }\n    }\n}"
 								}
 							]
+						},
+						{
+							"name": "New Request",
+							"id": "d6009719-88e9-4ce2-b59f-ef51e45817ee",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "POST",
+								"header": [],
+								"url": "{{apiUrl}}/methods/{{methodId}}"
+							},
+							"response": []
 						}
 					],
 					"id": "d30d73f5-4622-4ef9-9433-aebc3fe0cab1"
