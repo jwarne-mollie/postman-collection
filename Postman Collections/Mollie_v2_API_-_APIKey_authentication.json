@@ -1808,7 +1808,7 @@
 									"originalRequest": {
 										"method": "POST",
 										"header": [],
-										"url": "{{apiUrl}}/profiles/pfl_2q3RyuMGry/methods/creditcard"
+										"url": "{{apiUrl}}/profiles/me/methods/creditcard"
 									},
 									"status": "Created",
 									"code": 201,
@@ -1849,7 +1849,7 @@
 									"originalRequest": {
 										"method": "POST",
 										"header": [],
-										"url": "{{apiUrl}}/profiles/pfl_2q3RyuMGry/methods/ideal"
+										"url": "{{apiUrl}}/profiles/me/methods/ideal"
 									},
 									"status": "Created",
 									"code": 201,
@@ -1899,7 +1899,7 @@
 												}
 											}
 										},
-										"url": "{{apiUrl}}/profiles/pfl_2q3RyuMGry/methods/voucher/issuers/appetiz"
+										"url": "{{apiUrl}}/profiles/me/methods/voucher/issuers/appetiz"
 									},
 									"status": "Created",
 									"code": 201,
@@ -1940,7 +1940,7 @@
 									"originalRequest": {
 										"method": "POST",
 										"header": [],
-										"url": "{{apiUrl}}/profiles/pfl_2q3RyuMGry/methods/giftcard/issuers/festivalcadeau"
+										"url": "{{apiUrl}}/profiles/me/methods/giftcard/issuers/festivalcadeau"
 									},
 									"status": "Created",
 									"code": 201,
@@ -1995,7 +1995,7 @@
 									"originalRequest": {
 										"method": "DELETE",
 										"header": [],
-										"url": "{{apiUrl}}/profiles/pfl_2q3RyuMGry/methods/creditcard"
+										"url": "{{apiUrl}}/profiles/me/methods/creditcard"
 									},
 									"status": "No Content",
 									"code": 204,
@@ -2028,7 +2028,7 @@
 									"originalRequest": {
 										"method": "DELETE",
 										"header": [],
-										"url": "{{apiUrl}}/profiles/pfl_2q3RyuMGry/methods/voucher/issuers/appetiz"
+										"url": "{{apiUrl}}/profiles/me/methods/voucher/issuers/appetiz"
 									},
 									"status": "No Content",
 									"code": 204,
@@ -2061,7 +2061,7 @@
 									"originalRequest": {
 										"method": "DELETE",
 										"header": [],
-										"url": "{{apiUrl}}/profiles/pfl_2q3RyuMGry/methods/giftcard/issuers/festivalcadeau"
+										"url": "{{apiUrl}}/profiles/me/methods/giftcard/issuers/festivalcadeau"
 									},
 									"status": "No Content",
 									"code": 204,
