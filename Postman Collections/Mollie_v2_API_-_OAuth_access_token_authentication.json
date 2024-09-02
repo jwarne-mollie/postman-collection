@@ -1841,7 +1841,7 @@
 							]
 						},
 						{
-							"name": "Enable payment method Copy 2",
+							"name": "Disable payment method",
 							"id": "a48bcd8b-b1d4-4a2a-a443-5955e700c719",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
@@ -1849,7 +1849,7 @@
 							"request": {
 								"method": "DELETE",
 								"header": [],
-								"url": "{{apiUrl}}/profiles/pfl_2q3RyuMGry/methods/*id*"
+								"url": "{{apiUrl}}/profiles/*profileId*/methods/*id*"
 							},
 							"response": [
 								{
@@ -1888,7 +1888,7 @@
 							]
 						},
 						{
-							"name": "Enable gift card issuer Copy",
+							"name": "Enable gift card issuer",
 							"id": "3f570c68-a9fb-460e-8350-4d5906659fd8",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
@@ -1943,7 +1943,7 @@
 							]
 						},
 						{
-							"name": "Enable gift card issuer Copy 2",
+							"name": "Enable gift card issuer",
 							"id": "f5ff3d42-7020-4cce-a4be-267fb5072ac0",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
@@ -1990,7 +1990,7 @@
 							]
 						},
 						{
-							"name": "Enable voucher issuer Copy",
+							"name": "Enable voucher issuer",
 							"id": "e72c897a-f567-4e8b-a819-351858d8125c",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
@@ -2063,7 +2063,7 @@
 							]
 						},
 						{
-							"name": "Enable voucher issuer Copy 2",
+							"name": "Enable voucher issuer",
 							"id": "27e2c3a4-c046-4794-b990-fbc9467ba0c8",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
