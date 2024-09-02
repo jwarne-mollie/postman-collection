@@ -1837,179 +1837,7 @@
 									"cookie": [],
 									"responseTime": null,
 									"body": "{\n    \"resource\": \"method\",\n    \"id\": \"ideal\",\n    \"description\": \"iDEAL\",\n    \"minimumAmount\": {\n        \"value\": \"0.01\",\n        \"currency\": \"EUR\"\n    },\n    \"maximumAmount\": {\n        \"value\": \"50000.00\",\n        \"currency\": \"EUR\"\n    },\n    \"image\": {\n        \"size1x\": \"https://www.mollie.com/external/icons/payment-methods/ideal.png\",\n        \"size2x\": \"https://www.mollie.com/external/icons/payment-methods/ideal%402x.png\",\n        \"svg\": \"https://www.mollie.com/external/icons/payment-methods/ideal.svg\"\n    },\n    \"status\": \"pending-review\",\n    \"_links\": {\n        \"self\": {\n            \"href\": \"https://api.mollie.com/v2/methods/ideal\",\n            \"type\": \"application/hal+json\"\n        },\n        \"documentation\": {\n            \"href\": \"https://docs.mollie.com/reference/v2/profiles-api/enable-method\",\n            \"type\": \"text/html\"\n        }\n    }\n}"
-								}
-							]
-						},
-						{
-							"name": "Disable payment method",
-							"id": "a48bcd8b-b1d4-4a2a-a443-5955e700c719",
-							"protocolProfileBehavior": {
-								"disableBodyPruning": true
-							},
-							"request": {
-								"method": "DELETE",
-								"header": [],
-								"url": "{{apiUrl}}/profiles/*profileId*/methods/*id*"
-							},
-							"response": [
-								{
-									"id": "87088189-044c-4d87-bce5-5137ec499e3b",
-									"name": "Disable creditcard payment method",
-									"originalRequest": {
-										"method": "DELETE",
-										"header": [],
-										"url": "{{apiUrl}}/profiles/pfl_2q3RyuMGry/methods/creditcard"
-									},
-									"status": "No Content",
-									"code": 204,
-									"_postman_previewlanguage": "plain",
-									"header": [
-										{
-											"key": "Server",
-											"value": "nginx"
-										},
-										{
-											"key": "Date",
-											"value": "Wed, 19 Jan 2022 12:39:57 GMT"
-										},
-										{
-											"key": "X-Robots-Tag",
-											"value": "noindex"
-										},
-										{
-											"key": "Strict-Transport-Security",
-											"value": "max-age=31536000; includeSubDomains; preload"
-										}
-									],
-									"cookie": [],
-									"responseTime": null,
-									"body": ""
-								}
-							]
-						},
-						{
-							"name": "Enable gift card issuer",
-							"id": "3f570c68-a9fb-460e-8350-4d5906659fd8",
-							"protocolProfileBehavior": {
-								"disableBodyPruning": true
-							},
-							"request": {
-								"method": "POST",
-								"header": [],
-								"url": "{{apiUrl}}/profiles/pfl_2q3RyuMGry/methods/giftcard/issuers/*id*"
-							},
-							"response": [
-								{
-									"id": "4b3cae9a-3d57-4730-bdad-c5e4039ae244",
-									"name": "Enable festivalkado giftcard payment method",
-									"originalRequest": {
-										"method": "POST",
-										"header": [],
-										"url": "{{apiUrl}}/profiles/pfl_2q3RyuMGry/methods/giftcard/issuers/festivalcadeau"
-									},
-									"status": "Created",
-									"code": 201,
-									"_postman_previewlanguage": "json",
-									"header": [
-										{
-											"key": "Server",
-											"value": "nginx"
-										},
-										{
-											"key": "Date",
-											"value": "Wed, 19 Jan 2022 12:41:46 GMT"
-										},
-										{
-											"key": "Content-Type",
-											"value": "application/hal+json"
-										},
-										{
-											"key": "Content-Length",
-											"value": "335"
-										},
-										{
-											"key": "X-Robots-Tag",
-											"value": "noindex"
-										},
-										{
-											"key": "Strict-Transport-Security",
-											"value": "max-age=31536000; includeSubDomains; preload"
-										}
-									],
-									"cookie": [],
-									"responseTime": null,
-									"body": "{\n    \"resource\": \"issuer\",\n    \"id\": \"festivalcadeau\",\n    \"description\": \"FestivalCadeau Giftcard\",\n    \"status\": \"pending-issuer\",\n    \"_links\": {\n        \"self\": {\n            \"href\": \"https://api.mollie.com/v2/issuer/festivalcadeau\",\n            \"type\": \"application/hal+json\"\n        },\n        \"documentation\": {\n            \"href\": \"https://docs.mollie.com/reference/v2/profiles-api/enable-giftcard-issuer\",\n            \"type\": \"text/html\"\n        }\n    }\n}"
-								}
-							]
-						},
-						{
-							"name": "Enable gift card issuer",
-							"id": "f5ff3d42-7020-4cce-a4be-267fb5072ac0",
-							"protocolProfileBehavior": {
-								"disableBodyPruning": true
-							},
-							"request": {
-								"method": "DELETE",
-								"header": [],
-								"url": "{{apiUrl}}/profiles/pfl_2q3RyuMGry/methods/giftcard/issuers/*id*"
-							},
-							"response": [
-								{
-									"id": "34bfb0c5-dc94-46bd-b02d-497d0e9c9841",
-									"name": "Disable festivalkado giftcard payment method",
-									"originalRequest": {
-										"method": "DELETE",
-										"header": [],
-										"url": "{{apiUrl}}/profiles/pfl_2q3RyuMGry/methods/giftcard/issuers/festivalcadeau"
-									},
-									"status": "No Content",
-									"code": 204,
-									"_postman_previewlanguage": "plain",
-									"header": [
-										{
-											"key": "Server",
-											"value": "nginx"
-										},
-										{
-											"key": "Date",
-											"value": "Wed, 19 Jan 2022 12:42:23 GMT"
-										},
-										{
-											"key": "X-Robots-Tag",
-											"value": "noindex"
-										},
-										{
-											"key": "Strict-Transport-Security",
-											"value": "max-age=31536000; includeSubDomains; preload"
-										}
-									],
-									"cookie": [],
-									"responseTime": null,
-									"body": ""
-								}
-							]
-						},
-						{
-							"name": "Enable voucher issuer",
-							"id": "e72c897a-f567-4e8b-a819-351858d8125c",
-							"protocolProfileBehavior": {
-								"disableBodyPruning": true
-							},
-							"request": {
-								"method": "POST",
-								"header": [],
-								"body": {
-									"mode": "raw",
-									"raw": "{\n    \"contractId\":\"abc123\"\n}",
-									"options": {
-										"raw": {
-											"language": "json"
-										}
-									}
 								},
-								"url": "{{apiUrl}}/profiles/pfl_2q3RyuMGry/methods/voucher/issuers/*id*"
-							},
-							"response": [
 								{
 									"id": "a4f6c90d-22a1-44a1-8a6f-f65ec77a68bf",
 									"name": "Enable appetiz vouchers",
@@ -2059,19 +1887,60 @@
 									"cookie": [],
 									"responseTime": null,
 									"body": "{\n    \"resource\": \"issuer\",\n    \"id\": \"appetiz\",\n    \"name\": \"Appetiz\",\n    \"image\": {\n        \"size1x\": \"https://www.mollie.com/external/icons/voucher-issuers/appetiz.png\",\n        \"size2x\": \"https://www.mollie.com/external/icons/voucher-issuers/appetiz%402x.png\",\n        \"svg\": \"https://www.mollie.com/external/icons/voucher-issuers/appetiz.svg\"\n    },\n    \"status\": \"pending-issuer\",\n    \"contractor\": {\n        \"id\": \"Conecs\",\n        \"name\": \"Conecs\",\n        \"contractId\": \"abc123\"\n    },\n    \"_links\": {\n        \"self\": {\n            \"href\": \"https://api.mollie.com/v2/issuers/appetiz\",\n            \"type\": \"application/hal+json\"\n        },\n        \"documentation\": {\n            \"href\": \"https://docs.mollie.com/reference/v2/profiles-api/enable-voucher-issuer\",\n            \"type\": \"text/html\"\n        }\n    }\n}"
+								},
+								{
+									"id": "4b3cae9a-3d57-4730-bdad-c5e4039ae244",
+									"name": "Enable festivalkado giftcard payment method",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"url": "{{apiUrl}}/profiles/pfl_2q3RyuMGry/methods/giftcard/issuers/festivalcadeau"
+									},
+									"status": "Created",
+									"code": 201,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Server",
+											"value": "nginx"
+										},
+										{
+											"key": "Date",
+											"value": "Wed, 19 Jan 2022 12:41:46 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/hal+json"
+										},
+										{
+											"key": "Content-Length",
+											"value": "335"
+										},
+										{
+											"key": "X-Robots-Tag",
+											"value": "noindex"
+										},
+										{
+											"key": "Strict-Transport-Security",
+											"value": "max-age=31536000; includeSubDomains; preload"
+										}
+									],
+									"cookie": [],
+									"responseTime": null,
+									"body": "{\n    \"resource\": \"issuer\",\n    \"id\": \"festivalcadeau\",\n    \"description\": \"FestivalCadeau Giftcard\",\n    \"status\": \"pending-issuer\",\n    \"_links\": {\n        \"self\": {\n            \"href\": \"https://api.mollie.com/v2/issuer/festivalcadeau\",\n            \"type\": \"application/hal+json\"\n        },\n        \"documentation\": {\n            \"href\": \"https://docs.mollie.com/reference/v2/profiles-api/enable-giftcard-issuer\",\n            \"type\": \"text/html\"\n        }\n    }\n}"
 								}
 							]
 						},
 						{
-							"name": "Enable voucher issuer",
-							"id": "27e2c3a4-c046-4794-b990-fbc9467ba0c8",
+							"name": "Disable payment method",
+							"id": "a48bcd8b-b1d4-4a2a-a443-5955e700c719",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
 							},
 							"request": {
 								"method": "DELETE",
 								"header": [],
-								"url": "{{apiUrl}}/profiles/pfl_2q3RyuMGry/methods/voucher/issuers/*id*"
+								"url": "{{apiUrl}}/profiles/*profileId*/methods/*id*"
 							},
 							"response": [
 								{
@@ -2093,6 +1962,72 @@
 										{
 											"key": "Date",
 											"value": "Wed, 19 Jan 2022 12:46:13 GMT"
+										},
+										{
+											"key": "X-Robots-Tag",
+											"value": "noindex"
+										},
+										{
+											"key": "Strict-Transport-Security",
+											"value": "max-age=31536000; includeSubDomains; preload"
+										}
+									],
+									"cookie": [],
+									"responseTime": null,
+									"body": ""
+								},
+								{
+									"id": "34bfb0c5-dc94-46bd-b02d-497d0e9c9841",
+									"name": "Disable festivalkado giftcard payment method",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [],
+										"url": "{{apiUrl}}/profiles/pfl_2q3RyuMGry/methods/giftcard/issuers/festivalcadeau"
+									},
+									"status": "No Content",
+									"code": 204,
+									"_postman_previewlanguage": "plain",
+									"header": [
+										{
+											"key": "Server",
+											"value": "nginx"
+										},
+										{
+											"key": "Date",
+											"value": "Wed, 19 Jan 2022 12:42:23 GMT"
+										},
+										{
+											"key": "X-Robots-Tag",
+											"value": "noindex"
+										},
+										{
+											"key": "Strict-Transport-Security",
+											"value": "max-age=31536000; includeSubDomains; preload"
+										}
+									],
+									"cookie": [],
+									"responseTime": null,
+									"body": ""
+								},
+								{
+									"id": "87088189-044c-4d87-bce5-5137ec499e3b",
+									"name": "Disable creditcard payment method",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [],
+										"url": "{{apiUrl}}/profiles/pfl_2q3RyuMGry/methods/creditcard"
+									},
+									"status": "No Content",
+									"code": 204,
+									"_postman_previewlanguage": "plain",
+									"header": [
+										{
+											"key": "Server",
+											"value": "nginx"
+										},
+										{
+											"key": "Date",
+											"value": "Wed, 19 Jan 2022 12:39:57 GMT"
 										},
 										{
 											"key": "X-Robots-Tag",
