@@ -7120,10 +7120,47 @@
 									"cookie": [],
 									"responseTime": null,
 									"body": "{\n    \"access_token\": \"access_***\",\n    \"expires_in\": 3600,\n    \"token_type\": \"bearer\",\n    \"scope\": \"payments.read payments.write profiles.read\",\n    \"refresh_token\": \"refresh_***\"\n}"
-								},
+								}
+							]
+						},
+						{
+							"name": "Refresh tokens",
+							"event": [
 								{
-									"id": "f0429936-677f-48c5-9413-e16009cea3e3",
-									"name": "Refresh access token",
+									"listen": "test",
+									"script": {
+										"id": "3f0676a5-caa0-47e1-8064-c00bb3f04f54",
+										"exec": [
+											"const response = pm.response.json();",
+											"pm.environment.set(\"accessToken\", response.access_token);"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"id": "eb7bb475-3745-4dde-924e-4039ac528ebe",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"refresh_token\":\"{{refreshToken}}\",\n    \"grant_type\":\"refresh_token\",\n    \"redirect_uri\":\"https://example.com/mollie/connect_redirect.php\"\n}\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "https://api.mollie.com/oauth2/tokens"
+							},
+							"response": [
+								{
+									"id": "756a1e1e-e3d7-4d98-aea8-7bf8de0781c7",
+									"name": "Refresh token",
 									"originalRequest": {
 										"method": "POST",
 										"header": [],
@@ -7206,105 +7243,6 @@
 								"url": "https://api.mollie.com/oauth2/tokens"
 							},
 							"response": []
-						},
-						{
-							"name": "Refresh tokens Copy",
-							"event": [
-								{
-									"listen": "test",
-									"script": {
-										"id": "3f0676a5-caa0-47e1-8064-c00bb3f04f54",
-										"exec": [
-											"const response = pm.response.json();",
-											"pm.environment.set(\"accessToken\", response.access_token);"
-										],
-										"type": "text/javascript",
-										"packages": {}
-									}
-								}
-							],
-							"id": "eb7bb475-3745-4dde-924e-4039ac528ebe",
-							"protocolProfileBehavior": {
-								"disableBodyPruning": true
-							},
-							"request": {
-								"method": "POST",
-								"header": [],
-								"body": {
-									"mode": "raw",
-									"raw": "{\n    \"refresh_token\":\"{{refreshToken}}\",\n    \"grant_type\":\"refresh_token\",\n    \"redirect_uri\":\"https://example.com/mollie/connect_redirect.php\"\n}\n",
-									"options": {
-										"raw": {
-											"language": "json"
-										}
-									}
-								},
-								"url": "https://api.mollie.com/oauth2/tokens"
-							},
-							"response": [
-								{
-									"id": "756a1e1e-e3d7-4d98-aea8-7bf8de0781c7",
-									"name": "Refresh token",
-									"originalRequest": {
-										"method": "POST",
-										"header": [],
-										"body": {
-											"mode": "raw",
-											"raw": "{\n    \"refresh_token\":\"refresh_***\",\n    \"grant_type\":\"refresh_token\",\n    \"redirect_uri\":\"https://example.com/mollie/connect_redirect.php\"\n\n}",
-											"options": {
-												"raw": {
-													"language": "json"
-												}
-											}
-										},
-										"url": "https://api.mollie.com/oauth2/tokens"
-									},
-									"status": "OK",
-									"code": 200,
-									"_postman_previewlanguage": "json",
-									"header": [
-										{
-											"key": "Server",
-											"value": "nginx"
-										},
-										{
-											"key": "Date",
-											"value": "Fri, 07 Jan 2022 12:29:34 GMT"
-										},
-										{
-											"key": "Content-Type",
-											"value": "application/json"
-										},
-										{
-											"key": "Transfer-Encoding",
-											"value": "chunked"
-										},
-										{
-											"key": "Vary",
-											"value": "Accept-Encoding"
-										},
-										{
-											"key": "Cache-Control",
-											"value": "no-store"
-										},
-										{
-											"key": "Pragma",
-											"value": "no-cache"
-										},
-										{
-											"key": "Content-Encoding",
-											"value": "gzip"
-										},
-										{
-											"key": "Strict-Transport-Security",
-											"value": "max-age=31536000; includeSubDomains; preload"
-										}
-									],
-									"cookie": [],
-									"responseTime": null,
-									"body": "{\n    \"access_token\": \"access_***\",\n    \"expires_in\": 3600,\n    \"token_type\": \"bearer\",\n    \"scope\": \"payments.read payments.write profiles.read\",\n    \"refresh_token\": \"refresh_***\"\n}"
-								}
-							]
 						}
 					],
 					"id": "0e508cb8-8024-45a8-84a2-611152bee33f",
