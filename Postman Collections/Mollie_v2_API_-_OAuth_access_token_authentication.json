@@ -1753,7 +1753,7 @@
 							"request": {
 								"method": "POST",
 								"header": [],
-								"url": "{{apiUrl}}/profiles/pfl_2q3RyuMGry/methods/*id*"
+								"url": "{{apiUrl}}/profiles/{{profileId}}/methods/*id*"
 							},
 							"response": [
 								{
