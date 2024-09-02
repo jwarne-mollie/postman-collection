@@ -13,36 +13,29 @@
 					"item": [
 						{
 							"name": "Create payment",
-							"event": [
-								{
-									"listen": "prerequest",
-									"script": {
-										"id": "a645a4da-7791-43a3-8cae-ca21ca1c5e5d",
-										"exec": [
-											""
-										],
-										"type": "text/javascript",
-										"packages": {}
-									}
-								}
-							],
 							"id": "ad4db8df-20ba-47cf-91ad-41efe6714909",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
 							},
 							"request": {
-								"method": "POST",
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "{{access_token}}"
+									}
+								},
+								"method": "GET",
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n    \"amount\":\n    {\n        \"currency\":\"{{currency}}\",\n        \"value\":\"{{value}}\"\n    },\n    \"description\":\"{{description}}\",\n    \"redirectUrl\":\"{{redirectUrl}}\",\n    \"cancelUrl\":\"{{cancelUrl}}\",\n    \"webhookUrl\":\"{{webhookUrl}}\",\n    \"locale\":\"{{locale}}\",\n    \"method\":\"{{method}}\",\n    \"restrictPaymentMethodsToCountry\":\"{{restrictPaymentMethodsToCountry}}\",\n    \"billingAddress\":\n    {\n        \"streetAndNumber\":\"{{billingAddress.postalCode}}\",\n        \"postalCode\":\"{{billingAddress.country}}\",\n        \"city\":\"{{billingAddress.citt}}\",\n        \"region\":\"{{billingAddress.region}}\",\n        \"country\":\"{{billingAddress.country}}\"\n    },\n    \"metadata\":\n    {\n        \"someProperty\":\"someValue\",\n        \"anotherProperty\":\"anotherValue\"\n    }\n}",
+									"raw": "{\n    \"amount\":\n    {\n        \"currency\":\"{{currency}}\",\n        \"value\":\"{{value}}\"\n    },\n    \"description\":\"{{description}}\",\n    \"redirectUrl\":\"{{redirectUrl}}\",\n    \"cancelUrl\":\"{{cancelUrl}}\",\n    \"webhookUrl\":\"{{webhookUrl}}\",\n    \"locale\":\"{{locale}}\",\n    \"method\":\"{{method}}\",\n    \"billingAddress\":\n    {\n        \"streetAndNumber\":\"{{billingAddress.postalCode}}\",\n        \"postalCode\":\"{{billingAddress.country}}\",\n        \"city\":\"{{billingAddress.citt}}\",\n        \"region\":\"{{billingAddress.region}}\",\n        \"country\":\"{{billingAddress.country}}\"\n    },\n    \"metadata\":\n    {\n        \"someProperty\":\"someValue\",\n        \"anotherProperty\":\"anotherValue\"\n    },\n}",
 									"options": {
 										"raw": {
 											"language": "json"
 										}
 									}
 								},
-								"url": "{{apiUrl}}/payments"
+								"url": ""
 							},
 							"response": [
 								{
