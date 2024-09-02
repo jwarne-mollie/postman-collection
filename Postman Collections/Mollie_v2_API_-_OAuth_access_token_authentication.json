@@ -6684,7 +6684,7 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n    \"refresh_token\":\"{{refresh_token}}\",\n    \"grant_type\":\"refresh_token\",\n    \"redirect_uri\":\"https://example.com/mollie/connect_redirect.php\"\n\n}\n",
+									"raw": "{\n    \"refresh_token\":\"{{refresh_token}}\",\n    \"grant_type\":\"refresh_token\",\n    \"redirect_uri\":\"https://example.com/mollie/connect_redirect.php\"\n}\n",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -6702,7 +6702,7 @@
 										"header": [],
 										"body": {
 											"mode": "raw",
-											"raw": "{\n    \"code\":\"auth_***\",\n    \"grant_type\":\"authorization_code\",\n    \"redirect_uri\":\"https://example.com/mollie/connect_redirect.php\"\n\n}",
+											"raw": "{\n    \"code\":\"auth_***\",\n    \"grant_type\":\"authorization_code\",\n    \"redirect_uri\":\"https://example.com/mollie/connect_redirect.php\"\n}",
 											"options": {
 												"raw": {
 													"language": "json"
@@ -6764,7 +6764,7 @@
 										"header": [],
 										"body": {
 											"mode": "raw",
-											"raw": "{\n    \"refresh_token\":\"refresh_***\",\n    \"grant_type\":\"refresh_token\",\n    \"redirect_uri\":\"https://example.com/mollie/connect_redirect.php\"\n\n}",
+											"raw": "{\n    \"refresh_token\":\"refresh_***\",\n    \"grant_type\":\"refresh_token\",\n    \"redirect_uri\":\"https://example.com/mollie/connect_redirect.php\"\n}",
 											"options": {
 												"raw": {
 													"language": "json"
@@ -6819,79 +6819,6 @@
 									"body": "{\n    \"access_token\": \"access_***\",\n    \"expires_in\": 3600,\n    \"token_type\": \"bearer\",\n    \"scope\": \"payments.read payments.write profiles.read\",\n    \"refresh_token\": \"refresh_***\"\n}"
 								}
 							]
-						},
-						{
-							"name": "Refresh tokens",
-							"event": [
-								{
-									"listen": "test",
-									"script": {
-										"id": "16f6bd0d-b1ec-41ec-840b-8e62d5746827",
-										"exec": [
-											"const response = pm.response.json();",
-											"pm.environment.set(\"access_token\", response.access_token);"
-										],
-										"type": "text/javascript",
-										"packages": {}
-									}
-								}
-							],
-							"id": "ab90f4e6-532a-4ac2-9852-024a48b79210",
-							"protocolProfileBehavior": {
-								"disableBodyPruning": true
-							},
-							"request": {
-								"method": "POST",
-								"header": [],
-								"body": {
-									"mode": "raw",
-									"raw": "{\n    \"refresh_token\":\"{{refresh_token}}\",\n    \"grant_type\":\"refresh_token\",\n    \"redirect_uri\":\"https://example.com/mollie/connect_redirect.php\"\n\n}\n",
-									"options": {
-										"raw": {
-											"language": "json"
-										}
-									}
-								},
-								"url": "https://api.mollie.com/oauth2/tokens"
-							},
-							"response": []
-						},
-						{
-							"name": "Generate access token",
-							"event": [
-								{
-									"listen": "test",
-									"script": {
-										"id": "e087b5b5-cb25-4280-a29f-b2f5155edd0d",
-										"exec": [
-											"const response = pm.response.json();",
-											"pm.environment.set(\"access_token\", response.access_token);",
-											"pm.environment.set(\"refresh_token\", response.refresh_token);"
-										],
-										"type": "text/javascript",
-										"packages": {}
-									}
-								}
-							],
-							"id": "757426f4-5215-4342-ad17-5338de455785",
-							"protocolProfileBehavior": {
-								"disableBodyPruning": true
-							},
-							"request": {
-								"method": "POST",
-								"header": [],
-								"body": {
-									"mode": "raw",
-									"raw": "{\n    \"code\":\"auth_***\",\n    \"grant_type\":\"authorization_code\",\n    \"redirect_uri\":\"https://example.com/mollie/connect_redirect.php\"\n\n}\n",
-									"options": {
-										"raw": {
-											"language": "json"
-										}
-									}
-								},
-								"url": "https://api.mollie.com/oauth2/tokens"
-							},
-							"response": []
 						},
 						{
 							"name": "Revoke tokens",
