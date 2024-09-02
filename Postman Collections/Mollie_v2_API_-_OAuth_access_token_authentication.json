@@ -7629,67 +7629,6 @@
 							"response": []
 						},
 						{
-							"name": "List current profile",
-							"id": "d8979ad1-0b17-473e-b4b4-3efd6329fd5b",
-							"protocolProfileBehavior": {
-								"disableBodyPruning": true
-							},
-							"request": {
-								"auth": {
-									"type": "bearer",
-									"bearer": {
-										"token": "{{apiKeyTest}}"
-									}
-								},
-								"method": "GET",
-								"header": [],
-								"url": "{{apiUrl}}/profiles/me"
-							},
-							"response": [
-								{
-									"id": "5d96737d-335c-45ea-8ab5-f3eef9825726",
-									"name": "List current profile",
-									"originalRequest": {
-										"method": "GET",
-										"header": [],
-										"url": "{{apiUrl}}/profiles/me"
-									},
-									"status": "OK",
-									"code": 200,
-									"_postman_previewlanguage": "json",
-									"header": [
-										{
-											"key": "Server",
-											"value": "nginx"
-										},
-										{
-											"key": "Date",
-											"value": "Wed, 19 Jan 2022 12:36:44 GMT"
-										},
-										{
-											"key": "Content-Type",
-											"value": "application/hal+json"
-										},
-										{
-											"key": "Content-Length",
-											"value": "1111"
-										},
-										{
-											"key": "X-Robots-Tag",
-											"value": "noindex"
-										},
-										{
-											"key": "Strict-Transport-Security",
-											"value": "max-age=31536000; includeSubDomains; preload"
-										}
-									],
-									"cookie": [],
-									"responseTime": null,
-									"body": "{\n    \"resource\": \"profile\",\n    \"id\": \"pfl_85dxyKqNHa\",\n    \"mode\": \"live\",\n    \"name\": \"Jonas Test BV\",\n    \"website\": \"https://example.com\",\n    \"email\": \"test@mollie.com\",\n    \"phone\": \"+31612345678\",\n    \"categoryCode\": 6012,\n    \"businessCategory\": \"MONEY_SERVICES\",\n    \"status\": \"verified\",\n    \"createdAt\": \"2021-12-08T15:42:58+00:00\",\n    \"_links\": {\n        \"self\": {\n            \"href\": \"https://api.mollie.com/v2/profiles/pfl_85dxyKqNHa?testmode=true\",\n            \"type\": \"application/hal+json\"\n        },\n        \"dashboard\": {\n            \"href\": \"https://www.mollie.com/dashboard/org_13514547/settings/profiles/pfl_85dxyKqNHa\",\n            \"type\": \"text/html\"\n        },\n        \"chargebacks\": {\n            \"href\": \"https://api.mollie.com/v2/chargebacks\",\n            \"type\": \"application/hal+json\"\n        },\n        \"methods\": {\n            \"href\": \"https://api.mollie.com/v2/methods\",\n            \"type\": \"application/hal+json\"\n        },\n        \"payments\": {\n            \"href\": \"https://api.mollie.com/v2/payments\",\n            \"type\": \"application/hal+json\"\n        },\n        \"refunds\": {\n            \"href\": \"https://api.mollie.com/v2/refunds\",\n            \"type\": \"application/hal+json\"\n        },\n        \"checkoutPreviewUrl\": {\n            \"href\": \"https://www.mollie.com/checkout/preview/pfl_85dxyKqNHa\",\n            \"type\": \"text/html\"\n        },\n        \"documentation\": {\n            \"href\": \"https://docs.mollie.com/reference/v2/profiles-api/get-profile-me\",\n            \"type\": \"text/html\"\n        }\n    }\n}"
-								}
-							]
-						},
-						{
 							"name": "Get profile",
 							"id": "44ed0e78-cc65-4c15-b203-fff75230f906",
 							"protocolProfileBehavior": {
@@ -7814,6 +7753,94 @@
 									"cookie": [],
 									"responseTime": null,
 									"body": "{\n    \"resource\": \"profile\",\n    \"id\": \"pfl_2q3RyuMGry\",\n    \"mode\": \"live\",\n    \"name\": \"My new website name\",\n    \"website\": \"https://example.com\",\n    \"email\": \"test@mollie.com\",\n    \"phone\": \"+31208202071\",\n    \"categoryCode\": 5399,\n    \"businessCategory\": \"OTHER_MERCHANDISE\",\n    \"status\": \"unverified\",\n    \"createdAt\": \"2022-01-19T12:30:22+00:00\",\n    \"review\": {\n        \"status\": \"pending\"\n    },\n    \"_links\": {\n        \"self\": {\n            \"href\": \"https://api.mollie.com/v2/profiles/pfl_2q3RyuMGry\",\n            \"type\": \"application/hal+json\"\n        },\n        \"dashboard\": {\n            \"href\": \"https://www.mollie.com/dashboard/org_7049691/settings/profiles/pfl_2q3RyuMGry\",\n            \"type\": \"text/html\"\n        },\n        \"chargebacks\": {\n            \"href\": \"https://api.mollie.com/v2/chargebacks?profileId=pfl_2q3RyuMGry\",\n            \"type\": \"application/hal+json\"\n        },\n        \"methods\": {\n            \"href\": \"https://api.mollie.com/v2/methods?profileId=pfl_2q3RyuMGry\",\n            \"type\": \"application/hal+json\"\n        },\n        \"payments\": {\n            \"href\": \"https://api.mollie.com/v2/payments?profileId=pfl_2q3RyuMGry\",\n            \"type\": \"application/hal+json\"\n        },\n        \"refunds\": {\n            \"href\": \"https://api.mollie.com/v2/refunds?profileId=pfl_2q3RyuMGry\",\n            \"type\": \"application/hal+json\"\n        },\n        \"checkoutPreviewUrl\": {\n            \"href\": \"https://www.mollie.com/checkout/preview/pfl_2q3RyuMGry\",\n            \"type\": \"text/html\"\n        },\n        \"documentation\": {\n            \"href\": \"https://docs.mollie.com/reference/v2/profiles-api/update-profile\",\n            \"type\": \"text/html\"\n        }\n    }\n}"
+								}
+							]
+						},
+						{
+							"name": "Delete profile",
+							"id": "6cb0e13d-1e85-4572-bfb2-5ecc6d2f18ac",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": "{{apiUrl}}/profiles/{id}"
+							},
+							"response": []
+						},
+						{
+							"name": "Get current profile",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "374f7b26-04c4-4f5a-bc77-684921662c2d",
+										"exec": [
+											"const response = pm.response.json();",
+											"pm.environment.set(\"profileId\", response.id);"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"id": "d8979ad1-0b17-473e-b4b4-3efd6329fd5b",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "{{apiKeyTest}}"
+									}
+								},
+								"method": "GET",
+								"header": [],
+								"url": "{{apiUrl}}/profiles/me"
+							},
+							"response": [
+								{
+									"id": "5d96737d-335c-45ea-8ab5-f3eef9825726",
+									"name": "List current profile",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": "{{apiUrl}}/profiles/me"
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Server",
+											"value": "nginx"
+										},
+										{
+											"key": "Date",
+											"value": "Wed, 19 Jan 2022 12:36:44 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/hal+json"
+										},
+										{
+											"key": "Content-Length",
+											"value": "1111"
+										},
+										{
+											"key": "X-Robots-Tag",
+											"value": "noindex"
+										},
+										{
+											"key": "Strict-Transport-Security",
+											"value": "max-age=31536000; includeSubDomains; preload"
+										}
+									],
+									"cookie": [],
+									"responseTime": null,
+									"body": "{\n    \"resource\": \"profile\",\n    \"id\": \"pfl_85dxyKqNHa\",\n    \"mode\": \"live\",\n    \"name\": \"Jonas Test BV\",\n    \"website\": \"https://example.com\",\n    \"email\": \"test@mollie.com\",\n    \"phone\": \"+31612345678\",\n    \"categoryCode\": 6012,\n    \"businessCategory\": \"MONEY_SERVICES\",\n    \"status\": \"verified\",\n    \"createdAt\": \"2021-12-08T15:42:58+00:00\",\n    \"_links\": {\n        \"self\": {\n            \"href\": \"https://api.mollie.com/v2/profiles/pfl_85dxyKqNHa?testmode=true\",\n            \"type\": \"application/hal+json\"\n        },\n        \"dashboard\": {\n            \"href\": \"https://www.mollie.com/dashboard/org_13514547/settings/profiles/pfl_85dxyKqNHa\",\n            \"type\": \"text/html\"\n        },\n        \"chargebacks\": {\n            \"href\": \"https://api.mollie.com/v2/chargebacks\",\n            \"type\": \"application/hal+json\"\n        },\n        \"methods\": {\n            \"href\": \"https://api.mollie.com/v2/methods\",\n            \"type\": \"application/hal+json\"\n        },\n        \"payments\": {\n            \"href\": \"https://api.mollie.com/v2/payments\",\n            \"type\": \"application/hal+json\"\n        },\n        \"refunds\": {\n            \"href\": \"https://api.mollie.com/v2/refunds\",\n            \"type\": \"application/hal+json\"\n        },\n        \"checkoutPreviewUrl\": {\n            \"href\": \"https://www.mollie.com/checkout/preview/pfl_85dxyKqNHa\",\n            \"type\": \"text/html\"\n        },\n        \"documentation\": {\n            \"href\": \"https://docs.mollie.com/reference/v2/profiles-api/get-profile-me\",\n            \"type\": \"text/html\"\n        }\n    }\n}"
 								}
 							]
 						}
