@@ -53,7 +53,7 @@
 										"header": [],
 										"body": {
 											"mode": "raw",
-											"raw": "{\n    \"amount\":\n    {\n        \"currency\":\"EUR\",\n        \"value\":\"10.00\"\n    },\n    \"description\":\"I can do payments now\",\n    \"redirectUrl\":\"https://example.com\",\n    \"profileId\":\"pfl_zcfJRjkf6P\",\n    \"testmode\":true\n}",
+											"raw": "{\n    \"amount\":\n    {\n        \"currency\":\"EUR\",\n        \"value\":\"10.00\"\n    },\n    \"description\":\"I can do payments now\",\n    \"redirectUrl\":\"https://example.com\",\n    \"cancelUrl\":\"https://example.com/payment-cancelled\",\n    \"webhookUrl\":\"https://example.com/webhook\",\n    \"profileId\":\"pfl_zcfJRjkf6P\",\n    \"testmode\":true\n}",
 											"options": {
 												"raw": {
 													"language": "json"
@@ -103,7 +103,7 @@
 										"header": [],
 										"body": {
 											"mode": "raw",
-											"raw": "{\n    \"amount\":\n    {\n        \"currency\":\"EUR\",\n        \"value\":\"10.00\"\n    },\n    \"description\":\"I can do payments now\",\n    \"redirectUrl\":\"https://example.com\",\n    \"profileId\":\"pfl_zcfJRjkf6P\",\n    \"applicationFee\":\n    {   \n        \"amount\":\n        {\n            \"currency\":\"EUR\",\n            \"value\":\"1.50\"\n        },\n        \"description\":\"Platform free\"\n    },\n    \"testmode\":true\n}",
+											"raw": "{\n    \"amount\":\n    {\n        \"currency\":\"EUR\",\n        \"value\":\"10.00\"\n    },\n    \"description\":\"I can do payments now\",\n    \"redirectUrl\":\"https://example.com\",\n    \"cancelUrl\":\"https://example.com/payment-cancelled\",\n    \"webhookUrl\":\"https://example.com/webhook\",\n    \"profileId\":\"pfl_zcfJRjkf6P\",\n    \"applicationFee\":\n    {   \n        \"amount\":\n        {\n            \"currency\":\"EUR\",\n            \"value\":\"1.50\"\n        },\n        \"description\":\"Platform free\"\n    },\n    \"testmode\":true\n}",
 											"options": {
 												"raw": {
 													"language": "json"
@@ -153,7 +153,7 @@
 										"header": [],
 										"body": {
 											"mode": "raw",
-											"raw": "{\n    \"amount\": {\n        \"currency\": \"EUR\",\n        \"value\": \"10.00\"\n    },\n    \"method\": \"ideal\",\n    \"description\": \"My first routed payment\",\n    \"redirectUrl\": \"https://www.mollie.com/en\",\n    \"webhookUrl\": \"https://www.mollie.com/en\",\n    \"profileId\": \"pfl_85dxyKqNHa\",\n    \"routing\": [\n        {\n            \"amount\": {\n                \"currency\": \"EUR\",\n                \"value\": \"7.50\"\n            },\n            \"destination\": {\n                \"type\": \"organization\",\n                \"organizationId\": \"org_7049691\"\n            }\n        }\n    ],\n    \"testmode\":true\n}",
+											"raw": "{\n    \"amount\": {\n        \"currency\": \"EUR\",\n        \"value\": \"10.00\"\n    },\n    \"method\": \"ideal\",\n    \"description\": \"My first routed payment\",\n    \"redirectUrl\": \"https://www.mollie.com/en\",\n    \"cancelUrl\":\"https://example.com/payment-cancelled\",\n    \"webhookUrl\": \"https://www.mollie.com/en\",\n    \"profileId\": \"pfl_85dxyKqNHa\",\n    \"routing\": [\n        {\n            \"amount\": {\n                \"currency\": \"EUR\",\n                \"value\": \"7.50\"\n            },\n            \"destination\": {\n                \"type\": \"organization\",\n                \"organizationId\": \"org_7049691\"\n            }\n        }\n    ],\n    \"testmode\":true\n}",
 											"options": {
 												"raw": {
 													"language": "json"
@@ -203,7 +203,7 @@
 										"header": [],
 										"body": {
 											"mode": "raw",
-											"raw": "{\n    \"amount\":\n    {\n        \"currency\":\"EUR\",\n        \"value\":\"10.00\"\n    },\n    \"description\":\"This is the description\",\n    \"redirectUrl\":\"https://example.com/redirect\",\n    \"webhookUrl\":\"https://example.com/webhook\",\n    \"locale\":\"nl_NL\",\n    \"method\":\"creditcard\",\n    \"billingAddress\":\n    {\n        \"streetAndNumber\":\"Keizersgracht 126\",\n        \"postalCode\":\"1234AB\",\n        \"city\":\"Amsterdam\",\n        \"region\":\"Noord-Holland\",\n        \"country\":\"NL\"\n    },\n    \"captureMode\":\"manual\",\n    \"profileId\":\"pfl_zcfJRjkf6P\",\n    \"testmode\":true\n}",
+											"raw": "{\n    \"amount\":\n    {\n        \"currency\":\"EUR\",\n        \"value\":\"10.00\"\n    },\n    \"description\":\"This is the description\",\n    \"redirectUrl\":\"https://example.com/redirect\",\n    \"cancelUrl\":\"https://example.com/payment-cancelled\",\n    \"webhookUrl\":\"https://example.com/webhook\",\n    \"locale\":\"nl_NL\",\n    \"method\":\"creditcard\",\n    \"billingAddress\":\n    {\n        \"streetAndNumber\":\"Keizersgracht 126\",\n        \"postalCode\":\"1234AB\",\n        \"city\":\"Amsterdam\",\n        \"region\":\"Noord-Holland\",\n        \"country\":\"NL\"\n    },\n    \"captureMode\":\"manual\",\n    \"profileId\":\"pfl_zcfJRjkf6P\",\n    \"testmode\":true\n}",
 											"options": {
 												"raw": {
 													"language": "json"
@@ -269,7 +269,7 @@
 										"header": [],
 										"body": {
 											"mode": "raw",
-											"raw": "{\n    \"amount\":\n    {\n        \"currency\":\"EUR\",\n        \"value\":\"10.00\"\n    },\n    \"description\":\"This is the description\",\n    \"redirectUrl\":\"https://example.com/redirect\",\n    \"webhookUrl\":\"https://example.com/webhook\",\n    \"locale\":\"nl_NL\",\n    \"method\":\"creditcard\",\n    \"billingAddress\":\n    {\n        \"streetAndNumber\":\"Keizersgracht 126\",\n        \"postalCode\":\"1234AB\",\n        \"city\":\"Amsterdam\",\n        \"region\":\"Noord-Holland\",\n        \"country\":\"NL\"\n    },\n    \"captureDelay\":\"2 days\",\n    \"profileId\":\"pfl_zcfJRjkf6P\",\n    \"testmode\":true\n}",
+											"raw": "{\n    \"amount\":\n    {\n        \"currency\":\"EUR\",\n        \"value\":\"10.00\"\n    },\n    \"description\":\"This is the description\",\n    \"redirectUrl\":\"https://example.com/redirect\",\n    \"cancelUrl\":\"https://example.com/payment-cancelled\",\n    \"webhookUrl\":\"https://example.com/webhook\",\n    \"locale\":\"nl_NL\",\n    \"method\":\"creditcard\",\n    \"billingAddress\":\n    {\n        \"streetAndNumber\":\"Keizersgracht 126\",\n        \"postalCode\":\"1234AB\",\n        \"city\":\"Amsterdam\",\n        \"region\":\"Noord-Holland\",\n        \"country\":\"NL\"\n    },\n    \"captureDelay\":\"2 days\",\n    \"profileId\":\"pfl_zcfJRjkf6P\",\n    \"testmode\":true\n}",
 											"options": {
 												"raw": {
 													"language": "json"
