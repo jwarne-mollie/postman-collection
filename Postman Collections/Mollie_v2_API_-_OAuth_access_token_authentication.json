@@ -7159,6 +7159,19 @@
 						},
 						{
 							"name": "Revoke tokens",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "2e42477b-a9b4-47b8-a26c-b90e3e792469",
+										"exec": [
+											"pm.environment.clear(\"access_token\");"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
 							"id": "cd0c60da-78e3-4a37-a6e8-8317738a4c40",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
@@ -7210,6 +7223,163 @@
 							}
 						}
 					]
+				},
+				{
+					"name": "Permissions API",
+					"item": [
+						{
+							"name": "Get permission",
+							"id": "da869d7d-650e-4e77-b09f-17f223809361",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": "{{apiUrl}}/permissions/*id*"
+							},
+							"response": [
+								{
+									"id": "15704a34-01f8-4f58-8856-5740c9a21f0c",
+									"name": "read payments",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": "{{apiUrl}}/permissions/payments.read"
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Server",
+											"value": "nginx"
+										},
+										{
+											"key": "Date",
+											"value": "Fri, 14 Jan 2022 15:47:24 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/hal+json"
+										},
+										{
+											"key": "Content-Length",
+											"value": "321"
+										},
+										{
+											"key": "X-Robots-Tag",
+											"value": "noindex"
+										},
+										{
+											"key": "Strict-Transport-Security",
+											"value": "max-age=31536000; includeSubDomains; preload"
+										}
+									],
+									"cookie": [],
+									"responseTime": null,
+									"body": "{\n    \"resource\": \"permission\",\n    \"id\": \"payments.read\",\n    \"description\": \"View your payments\",\n    \"granted\": true,\n    \"_links\": {\n        \"self\": {\n            \"href\": \"https://api.mollie.com/v2/permissions/payments.read\",\n            \"type\": \"application/hal+json\"\n        },\n        \"documentation\": {\n            \"href\": \"https://docs.mollie.com/reference/v2/permissions-api/get-permission\",\n            \"type\": \"text/html\"\n        }\n    }\n}"
+								},
+								{
+									"id": "72b8ecd9-9219-4a22-91b0-bbb193bc5bbb",
+									"name": "write payments",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": "{{apiUrl}}/permissions/payments.write"
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Server",
+											"value": "nginx"
+										},
+										{
+											"key": "Date",
+											"value": "Fri, 14 Jan 2022 15:47:39 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/hal+json"
+										},
+										{
+											"key": "Content-Length",
+											"value": "339"
+										},
+										{
+											"key": "X-Robots-Tag",
+											"value": "noindex"
+										},
+										{
+											"key": "Strict-Transport-Security",
+											"value": "max-age=31536000; includeSubDomains; preload"
+										}
+									],
+									"cookie": [],
+									"responseTime": null,
+									"body": "{\n    \"resource\": \"permission\",\n    \"id\": \"payments.write\",\n    \"description\": \"Create, cancel and update payments\",\n    \"granted\": true,\n    \"_links\": {\n        \"self\": {\n            \"href\": \"https://api.mollie.com/v2/permissions/payments.write\",\n            \"type\": \"application/hal+json\"\n        },\n        \"documentation\": {\n            \"href\": \"https://docs.mollie.com/reference/v2/permissions-api/get-permission\",\n            \"type\": \"text/html\"\n        }\n    }\n}"
+								}
+							]
+						},
+						{
+							"name": "List permissions",
+							"id": "8efe440c-85fc-4633-bf7e-901cd3004baa",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": "{{apiUrl}}/permissions"
+							},
+							"response": [
+								{
+									"id": "b3513046-70f0-4966-b5c6-ecb198f718d0",
+									"name": "All permissions",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": "{{apiUrl}}/permissions"
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Server",
+											"value": "nginx"
+										},
+										{
+											"key": "Date",
+											"value": "Fri, 14 Jan 2022 15:48:49 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/hal+json"
+										},
+										{
+											"key": "Content-Length",
+											"value": "5578"
+										},
+										{
+											"key": "X-Robots-Tag",
+											"value": "noindex"
+										},
+										{
+											"key": "Strict-Transport-Security",
+											"value": "max-age=31536000; includeSubDomains; preload"
+										}
+									],
+									"cookie": [],
+									"responseTime": null,
+									"body": "{\n    \"_embedded\": {\n        \"permissions\": [\n            {\n                \"resource\": \"permission\",\n                \"id\": \"customers.read\",\n                \"description\": \"View your customers\",\n                \"granted\": false,\n                \"_links\": {\n                    \"self\": {\n                        \"href\": \"https://api.mollie.com/v2/permissions/customers.read\",\n                        \"type\": \"application/hal+json\"\n                    }\n                }\n            },\n            {\n                \"resource\": \"permission\",\n                \"id\": \"customers.write\",\n                \"description\": \"Create new customers\",\n                \"granted\": false,\n                \"_links\": {\n                    \"self\": {\n                        \"href\": \"https://api.mollie.com/v2/permissions/customers.write\",\n                        \"type\": \"application/hal+json\"\n                    }\n                }\n            },\n            {\n                \"resource\": \"permission\",\n                \"id\": \"invoices.read\",\n                \"description\": \"View your invoices\",\n                \"granted\": false,\n                \"_links\": {\n                    \"self\": {\n                        \"href\": \"https://api.mollie.com/v2/permissions/invoices.read\",\n                        \"type\": \"application/hal+json\"\n                    }\n                }\n            },\n            {\n                \"resource\": \"permission\",\n                \"id\": \"mandates.read\",\n                \"description\": \"View your customers' mandates\",\n                \"granted\": false,\n                \"_links\": {\n                    \"self\": {\n                        \"href\": \"https://api.mollie.com/v2/permissions/mandates.read\",\n                        \"type\": \"application/hal+json\"\n                    }\n                }\n            },\n            {\n                \"resource\": \"permission\",\n                \"id\": \"mandates.write\",\n                \"description\": \"Update your customers' mandates\",\n                \"granted\": false,\n                \"_links\": {\n                    \"self\": {\n                        \"href\": \"https://api.mollie.com/v2/permissions/mandates.write\",\n                        \"type\": \"application/hal+json\"\n                    }\n                }\n            },\n            {\n                \"resource\": \"permission\",\n                \"id\": \"onboarding.read\",\n                \"description\": \"View your onboarding status\",\n                \"granted\": false,\n                \"_links\": {\n                    \"self\": {\n                        \"href\": \"https://api.mollie.com/v2/permissions/onboarding.read\",\n                        \"type\": \"application/hal+json\"\n                    }\n                }\n            },\n            {\n                \"resource\": \"permission\",\n                \"id\": \"onboarding.write\",\n                \"description\": \"Submit onboarding data\",\n                \"granted\": false,\n                \"_links\": {\n                    \"self\": {\n                        \"href\": \"https://api.mollie.com/v2/permissions/onboarding.write\",\n                        \"type\": \"application/hal+json\"\n                    }\n                }\n            },\n            {\n                \"resource\": \"permission\",\n                \"id\": \"orders.read\",\n                \"description\": \"View your orders\",\n                \"granted\": false,\n                \"_links\": {\n                    \"self\": {\n                        \"href\": \"https://api.mollie.com/v2/permissions/orders.read\",\n                        \"type\": \"application/hal+json\"\n                    }\n                }\n            },\n            {\n                \"resource\": \"permission\",\n                \"id\": \"orders.write\",\n                \"description\": \"Create new orders\",\n                \"granted\": false,\n                \"_links\": {\n                    \"self\": {\n                        \"href\": \"https://api.mollie.com/v2/permissions/orders.write\",\n                        \"type\": \"application/hal+json\"\n                    }\n                }\n            },\n            {\n                \"resource\": \"permission\",\n                \"id\": \"organizations.read\",\n                \"description\": \"View your organizational information\",\n                \"granted\": true,\n                \"_links\": {\n                    \"self\": {\n                        \"href\": \"https://api.mollie.com/v2/permissions/organizations.read\",\n                        \"type\": \"application/hal+json\"\n                    }\n                }\n            },\n            {\n                \"resource\": \"permission\",\n                \"id\": \"organizations.write\",\n                \"description\": \"Update your organizational information\",\n                \"granted\": false,\n                \"_links\": {\n                    \"self\": {\n                        \"href\": \"https://api.mollie.com/v2/permissions/organizations.write\",\n                        \"type\": \"application/hal+json\"\n                    }\n                }\n            },\n            {\n                \"resource\": \"permission\",\n                \"id\": \"payment-links.read\",\n                \"description\": \"View your payment links\",\n                \"granted\": false,\n                \"_links\": {\n                    \"self\": {\n                        \"href\": \"https://api.mollie.com/v2/permissions/payment-links.read\",\n                        \"type\": \"application/hal+json\"\n                    }\n                }\n            },\n            {\n                \"resource\": \"permission\",\n                \"id\": \"payment-links.write\",\n                \"description\": \"Create payment links\",\n                \"granted\": false,\n                \"_links\": {\n                    \"self\": {\n                        \"href\": \"https://api.mollie.com/v2/permissions/payment-links.write\",\n                        \"type\": \"application/hal+json\"\n                    }\n                }\n            },\n            {\n                \"resource\": \"permission\",\n                \"id\": \"payments.read\",\n                \"description\": \"View your payments\",\n                \"granted\": true,\n                \"_links\": {\n                    \"self\": {\n                        \"href\": \"https://api.mollie.com/v2/permissions/payments.read\",\n                        \"type\": \"application/hal+json\"\n                    }\n                }\n            },\n            {\n                \"resource\": \"permission\",\n                \"id\": \"payments.write\",\n                \"description\": \"Create, cancel and update payments\",\n                \"granted\": true,\n                \"_links\": {\n                    \"self\": {\n                        \"href\": \"https://api.mollie.com/v2/permissions/payments.write\",\n                        \"type\": \"application/hal+json\"\n                    }\n                }\n            },\n            {\n                \"resource\": \"permission\",\n                \"id\": \"profiles.read\",\n                \"description\": \"View your payment profiles\",\n                \"granted\": true,\n                \"_links\": {\n                    \"self\": {\n                        \"href\": \"https://api.mollie.com/v2/permissions/profiles.read\",\n                        \"type\": \"application/hal+json\"\n                    }\n                }\n            },\n            {\n                \"resource\": \"permission\",\n                \"id\": \"profiles.write\",\n                \"description\": \"Manage your payment profiles and its settings\",\n                \"granted\": false,\n                \"_links\": {\n                    \"self\": {\n                        \"href\": \"https://api.mollie.com/v2/permissions/profiles.write\",\n                        \"type\": \"application/hal+json\"\n                    }\n                }\n            },\n            {\n                \"resource\": \"permission\",\n                \"id\": \"refunds.read\",\n                \"description\": \"View your refunds\",\n                \"granted\": false,\n                \"_links\": {\n                    \"self\": {\n                        \"href\": \"https://api.mollie.com/v2/permissions/refunds.read\",\n                        \"type\": \"application/hal+json\"\n                    }\n                }\n            },\n            {\n                \"resource\": \"permission\",\n                \"id\": \"refunds.write\",\n                \"description\": \"Create new refunds\",\n                \"granted\": false,\n                \"_links\": {\n                    \"self\": {\n                        \"href\": \"https://api.mollie.com/v2/permissions/refunds.write\",\n                        \"type\": \"application/hal+json\"\n                    }\n                }\n            },\n            {\n                \"resource\": \"permission\",\n                \"id\": \"settlements.read\",\n                \"description\": \"View your settlements\",\n                \"granted\": false,\n                \"_links\": {\n                    \"self\": {\n                        \"href\": \"https://api.mollie.com/v2/permissions/settlements.read\",\n                        \"type\": \"application/hal+json\"\n                    }\n                }\n            },\n            {\n                \"resource\": \"permission\",\n                \"id\": \"shipments.read\",\n                \"description\": \"View your orders' shipments\",\n                \"granted\": false,\n                \"_links\": {\n                    \"self\": {\n                        \"href\": \"https://api.mollie.com/v2/permissions/shipments.read\",\n                        \"type\": \"application/hal+json\"\n                    }\n                }\n            },\n            {\n                \"resource\": \"permission\",\n                \"id\": \"shipments.write\",\n                \"description\": \"Create new shipments for your orders\",\n                \"granted\": false,\n                \"_links\": {\n                    \"self\": {\n                        \"href\": \"https://api.mollie.com/v2/permissions/shipments.write\",\n                        \"type\": \"application/hal+json\"\n                    }\n                }\n            },\n            {\n                \"resource\": \"permission\",\n                \"id\": \"subscriptions.read\",\n                \"description\": \"View your customers' subscriptions\",\n                \"granted\": false,\n                \"_links\": {\n                    \"self\": {\n                        \"href\": \"https://api.mollie.com/v2/permissions/subscriptions.read\",\n                        \"type\": \"application/hal+json\"\n                    }\n                }\n            },\n            {\n                \"resource\": \"permission\",\n                \"id\": \"subscriptions.write\",\n                \"description\": \"Create, cancel and update subscriptions\",\n                \"granted\": false,\n                \"_links\": {\n                    \"self\": {\n                        \"href\": \"https://api.mollie.com/v2/permissions/subscriptions.write\",\n                        \"type\": \"application/hal+json\"\n                    }\n                }\n            }\n        ]\n    },\n    \"count\": 24,\n    \"_links\": {\n        \"documentation\": {\n            \"href\": \"https://docs.mollie.com/reference/v2/permissions-api/list-permissions\",\n            \"type\": \"text/html\"\n        },\n        \"self\": {\n            \"href\": \"https://api.mollie.com/v2/permissions\",\n            \"type\": \"application/hal+json\"\n        }\n    }\n}"
+								}
+							]
+						}
+					],
+					"id": "9bb4c393-deb5-4ca5-9b1e-ec782008f45a"
 				},
 				{
 					"name": "Organizations API",
@@ -7381,163 +7551,6 @@
 						}
 					],
 					"id": "b0a96180-5e74-46f2-b2f1-94d6846b1289"
-				},
-				{
-					"name": "Permissions API",
-					"item": [
-						{
-							"name": "Get permission",
-							"id": "da869d7d-650e-4e77-b09f-17f223809361",
-							"protocolProfileBehavior": {
-								"disableBodyPruning": true
-							},
-							"request": {
-								"method": "GET",
-								"header": [],
-								"url": "{{apiUrl}}/permissions/*id*"
-							},
-							"response": [
-								{
-									"id": "15704a34-01f8-4f58-8856-5740c9a21f0c",
-									"name": "read payments",
-									"originalRequest": {
-										"method": "GET",
-										"header": [],
-										"url": "{{apiUrl}}/permissions/payments.read"
-									},
-									"status": "OK",
-									"code": 200,
-									"_postman_previewlanguage": "json",
-									"header": [
-										{
-											"key": "Server",
-											"value": "nginx"
-										},
-										{
-											"key": "Date",
-											"value": "Fri, 14 Jan 2022 15:47:24 GMT"
-										},
-										{
-											"key": "Content-Type",
-											"value": "application/hal+json"
-										},
-										{
-											"key": "Content-Length",
-											"value": "321"
-										},
-										{
-											"key": "X-Robots-Tag",
-											"value": "noindex"
-										},
-										{
-											"key": "Strict-Transport-Security",
-											"value": "max-age=31536000; includeSubDomains; preload"
-										}
-									],
-									"cookie": [],
-									"responseTime": null,
-									"body": "{\n    \"resource\": \"permission\",\n    \"id\": \"payments.read\",\n    \"description\": \"View your payments\",\n    \"granted\": true,\n    \"_links\": {\n        \"self\": {\n            \"href\": \"https://api.mollie.com/v2/permissions/payments.read\",\n            \"type\": \"application/hal+json\"\n        },\n        \"documentation\": {\n            \"href\": \"https://docs.mollie.com/reference/v2/permissions-api/get-permission\",\n            \"type\": \"text/html\"\n        }\n    }\n}"
-								},
-								{
-									"id": "72b8ecd9-9219-4a22-91b0-bbb193bc5bbb",
-									"name": "write payments",
-									"originalRequest": {
-										"method": "GET",
-										"header": [],
-										"url": "{{apiUrl}}/permissions/payments.write"
-									},
-									"status": "OK",
-									"code": 200,
-									"_postman_previewlanguage": "json",
-									"header": [
-										{
-											"key": "Server",
-											"value": "nginx"
-										},
-										{
-											"key": "Date",
-											"value": "Fri, 14 Jan 2022 15:47:39 GMT"
-										},
-										{
-											"key": "Content-Type",
-											"value": "application/hal+json"
-										},
-										{
-											"key": "Content-Length",
-											"value": "339"
-										},
-										{
-											"key": "X-Robots-Tag",
-											"value": "noindex"
-										},
-										{
-											"key": "Strict-Transport-Security",
-											"value": "max-age=31536000; includeSubDomains; preload"
-										}
-									],
-									"cookie": [],
-									"responseTime": null,
-									"body": "{\n    \"resource\": \"permission\",\n    \"id\": \"payments.write\",\n    \"description\": \"Create, cancel and update payments\",\n    \"granted\": true,\n    \"_links\": {\n        \"self\": {\n            \"href\": \"https://api.mollie.com/v2/permissions/payments.write\",\n            \"type\": \"application/hal+json\"\n        },\n        \"documentation\": {\n            \"href\": \"https://docs.mollie.com/reference/v2/permissions-api/get-permission\",\n            \"type\": \"text/html\"\n        }\n    }\n}"
-								}
-							]
-						},
-						{
-							"name": "List permissions",
-							"id": "8efe440c-85fc-4633-bf7e-901cd3004baa",
-							"protocolProfileBehavior": {
-								"disableBodyPruning": true
-							},
-							"request": {
-								"method": "GET",
-								"header": [],
-								"url": "{{apiUrl}}/permissions"
-							},
-							"response": [
-								{
-									"id": "b3513046-70f0-4966-b5c6-ecb198f718d0",
-									"name": "All permissions",
-									"originalRequest": {
-										"method": "GET",
-										"header": [],
-										"url": "{{apiUrl}}/permissions"
-									},
-									"status": "OK",
-									"code": 200,
-									"_postman_previewlanguage": "json",
-									"header": [
-										{
-											"key": "Server",
-											"value": "nginx"
-										},
-										{
-											"key": "Date",
-											"value": "Fri, 14 Jan 2022 15:48:49 GMT"
-										},
-										{
-											"key": "Content-Type",
-											"value": "application/hal+json"
-										},
-										{
-											"key": "Content-Length",
-											"value": "5578"
-										},
-										{
-											"key": "X-Robots-Tag",
-											"value": "noindex"
-										},
-										{
-											"key": "Strict-Transport-Security",
-											"value": "max-age=31536000; includeSubDomains; preload"
-										}
-									],
-									"cookie": [],
-									"responseTime": null,
-									"body": "{\n    \"_embedded\": {\n        \"permissions\": [\n            {\n                \"resource\": \"permission\",\n                \"id\": \"customers.read\",\n                \"description\": \"View your customers\",\n                \"granted\": false,\n                \"_links\": {\n                    \"self\": {\n                        \"href\": \"https://api.mollie.com/v2/permissions/customers.read\",\n                        \"type\": \"application/hal+json\"\n                    }\n                }\n            },\n            {\n                \"resource\": \"permission\",\n                \"id\": \"customers.write\",\n                \"description\": \"Create new customers\",\n                \"granted\": false,\n                \"_links\": {\n                    \"self\": {\n                        \"href\": \"https://api.mollie.com/v2/permissions/customers.write\",\n                        \"type\": \"application/hal+json\"\n                    }\n                }\n            },\n            {\n                \"resource\": \"permission\",\n                \"id\": \"invoices.read\",\n                \"description\": \"View your invoices\",\n                \"granted\": false,\n                \"_links\": {\n                    \"self\": {\n                        \"href\": \"https://api.mollie.com/v2/permissions/invoices.read\",\n                        \"type\": \"application/hal+json\"\n                    }\n                }\n            },\n            {\n                \"resource\": \"permission\",\n                \"id\": \"mandates.read\",\n                \"description\": \"View your customers' mandates\",\n                \"granted\": false,\n                \"_links\": {\n                    \"self\": {\n                        \"href\": \"https://api.mollie.com/v2/permissions/mandates.read\",\n                        \"type\": \"application/hal+json\"\n                    }\n                }\n            },\n            {\n                \"resource\": \"permission\",\n                \"id\": \"mandates.write\",\n                \"description\": \"Update your customers' mandates\",\n                \"granted\": false,\n                \"_links\": {\n                    \"self\": {\n                        \"href\": \"https://api.mollie.com/v2/permissions/mandates.write\",\n                        \"type\": \"application/hal+json\"\n                    }\n                }\n            },\n            {\n                \"resource\": \"permission\",\n                \"id\": \"onboarding.read\",\n                \"description\": \"View your onboarding status\",\n                \"granted\": false,\n                \"_links\": {\n                    \"self\": {\n                        \"href\": \"https://api.mollie.com/v2/permissions/onboarding.read\",\n                        \"type\": \"application/hal+json\"\n                    }\n                }\n            },\n            {\n                \"resource\": \"permission\",\n                \"id\": \"onboarding.write\",\n                \"description\": \"Submit onboarding data\",\n                \"granted\": false,\n                \"_links\": {\n                    \"self\": {\n                        \"href\": \"https://api.mollie.com/v2/permissions/onboarding.write\",\n                        \"type\": \"application/hal+json\"\n                    }\n                }\n            },\n            {\n                \"resource\": \"permission\",\n                \"id\": \"orders.read\",\n                \"description\": \"View your orders\",\n                \"granted\": false,\n                \"_links\": {\n                    \"self\": {\n                        \"href\": \"https://api.mollie.com/v2/permissions/orders.read\",\n                        \"type\": \"application/hal+json\"\n                    }\n                }\n            },\n            {\n                \"resource\": \"permission\",\n                \"id\": \"orders.write\",\n                \"description\": \"Create new orders\",\n                \"granted\": false,\n                \"_links\": {\n                    \"self\": {\n                        \"href\": \"https://api.mollie.com/v2/permissions/orders.write\",\n                        \"type\": \"application/hal+json\"\n                    }\n                }\n            },\n            {\n                \"resource\": \"permission\",\n                \"id\": \"organizations.read\",\n                \"description\": \"View your organizational information\",\n                \"granted\": true,\n                \"_links\": {\n                    \"self\": {\n                        \"href\": \"https://api.mollie.com/v2/permissions/organizations.read\",\n                        \"type\": \"application/hal+json\"\n                    }\n                }\n            },\n            {\n                \"resource\": \"permission\",\n                \"id\": \"organizations.write\",\n                \"description\": \"Update your organizational information\",\n                \"granted\": false,\n                \"_links\": {\n                    \"self\": {\n                        \"href\": \"https://api.mollie.com/v2/permissions/organizations.write\",\n                        \"type\": \"application/hal+json\"\n                    }\n                }\n            },\n            {\n                \"resource\": \"permission\",\n                \"id\": \"payment-links.read\",\n                \"description\": \"View your payment links\",\n                \"granted\": false,\n                \"_links\": {\n                    \"self\": {\n                        \"href\": \"https://api.mollie.com/v2/permissions/payment-links.read\",\n                        \"type\": \"application/hal+json\"\n                    }\n                }\n            },\n            {\n                \"resource\": \"permission\",\n                \"id\": \"payment-links.write\",\n                \"description\": \"Create payment links\",\n                \"granted\": false,\n                \"_links\": {\n                    \"self\": {\n                        \"href\": \"https://api.mollie.com/v2/permissions/payment-links.write\",\n                        \"type\": \"application/hal+json\"\n                    }\n                }\n            },\n            {\n                \"resource\": \"permission\",\n                \"id\": \"payments.read\",\n                \"description\": \"View your payments\",\n                \"granted\": true,\n                \"_links\": {\n                    \"self\": {\n                        \"href\": \"https://api.mollie.com/v2/permissions/payments.read\",\n                        \"type\": \"application/hal+json\"\n                    }\n                }\n            },\n            {\n                \"resource\": \"permission\",\n                \"id\": \"payments.write\",\n                \"description\": \"Create, cancel and update payments\",\n                \"granted\": true,\n                \"_links\": {\n                    \"self\": {\n                        \"href\": \"https://api.mollie.com/v2/permissions/payments.write\",\n                        \"type\": \"application/hal+json\"\n                    }\n                }\n            },\n            {\n                \"resource\": \"permission\",\n                \"id\": \"profiles.read\",\n                \"description\": \"View your payment profiles\",\n                \"granted\": true,\n                \"_links\": {\n                    \"self\": {\n                        \"href\": \"https://api.mollie.com/v2/permissions/profiles.read\",\n                        \"type\": \"application/hal+json\"\n                    }\n                }\n            },\n            {\n                \"resource\": \"permission\",\n                \"id\": \"profiles.write\",\n                \"description\": \"Manage your payment profiles and its settings\",\n                \"granted\": false,\n                \"_links\": {\n                    \"self\": {\n                        \"href\": \"https://api.mollie.com/v2/permissions/profiles.write\",\n                        \"type\": \"application/hal+json\"\n                    }\n                }\n            },\n            {\n                \"resource\": \"permission\",\n                \"id\": \"refunds.read\",\n                \"description\": \"View your refunds\",\n                \"granted\": false,\n                \"_links\": {\n                    \"self\": {\n                        \"href\": \"https://api.mollie.com/v2/permissions/refunds.read\",\n                        \"type\": \"application/hal+json\"\n                    }\n                }\n            },\n            {\n                \"resource\": \"permission\",\n                \"id\": \"refunds.write\",\n                \"description\": \"Create new refunds\",\n                \"granted\": false,\n                \"_links\": {\n                    \"self\": {\n                        \"href\": \"https://api.mollie.com/v2/permissions/refunds.write\",\n                        \"type\": \"application/hal+json\"\n                    }\n                }\n            },\n            {\n                \"resource\": \"permission\",\n                \"id\": \"settlements.read\",\n                \"description\": \"View your settlements\",\n                \"granted\": false,\n                \"_links\": {\n                    \"self\": {\n                        \"href\": \"https://api.mollie.com/v2/permissions/settlements.read\",\n                        \"type\": \"application/hal+json\"\n                    }\n                }\n            },\n            {\n                \"resource\": \"permission\",\n                \"id\": \"shipments.read\",\n                \"description\": \"View your orders' shipments\",\n                \"granted\": false,\n                \"_links\": {\n                    \"self\": {\n                        \"href\": \"https://api.mollie.com/v2/permissions/shipments.read\",\n                        \"type\": \"application/hal+json\"\n                    }\n                }\n            },\n            {\n                \"resource\": \"permission\",\n                \"id\": \"shipments.write\",\n                \"description\": \"Create new shipments for your orders\",\n                \"granted\": false,\n                \"_links\": {\n                    \"self\": {\n                        \"href\": \"https://api.mollie.com/v2/permissions/shipments.write\",\n                        \"type\": \"application/hal+json\"\n                    }\n                }\n            },\n            {\n                \"resource\": \"permission\",\n                \"id\": \"subscriptions.read\",\n                \"description\": \"View your customers' subscriptions\",\n                \"granted\": false,\n                \"_links\": {\n                    \"self\": {\n                        \"href\": \"https://api.mollie.com/v2/permissions/subscriptions.read\",\n                        \"type\": \"application/hal+json\"\n                    }\n                }\n            },\n            {\n                \"resource\": \"permission\",\n                \"id\": \"subscriptions.write\",\n                \"description\": \"Create, cancel and update subscriptions\",\n                \"granted\": false,\n                \"_links\": {\n                    \"self\": {\n                        \"href\": \"https://api.mollie.com/v2/permissions/subscriptions.write\",\n                        \"type\": \"application/hal+json\"\n                    }\n                }\n            }\n        ]\n    },\n    \"count\": 24,\n    \"_links\": {\n        \"documentation\": {\n            \"href\": \"https://docs.mollie.com/reference/v2/permissions-api/list-permissions\",\n            \"type\": \"text/html\"\n        },\n        \"self\": {\n            \"href\": \"https://api.mollie.com/v2/permissions\",\n            \"type\": \"application/hal+json\"\n        }\n    }\n}"
-								}
-							]
-						}
-					],
-					"id": "9bb4c393-deb5-4ca5-9b1e-ec782008f45a"
 				},
 				{
 					"name": "Profiles API",
@@ -7851,28 +7864,6 @@
 					"name": "Onboarding API",
 					"item": [
 						{
-							"name": "Submit onboarding data",
-							"id": "fbb0a6b0-7825-4948-a973-61a0093f3ffe",
-							"protocolProfileBehavior": {
-								"disableBodyPruning": true
-							},
-							"request": {
-								"method": "POST",
-								"header": [],
-								"body": {
-									"mode": "raw",
-									"raw": "{\n    \"organization\": {\n        \"name\": \"Mollie B.V.\",\n        \"address\": {\n            \"streetAndNumber\": \"Keizersgracht 126\",\n            \"postalCode\": \"1015 CW\",\n            \"city\": \"Amsterdam\",\n            \"country\": \"NL\"\n        },\n        \"registrationNumber\": \"30204462\",\n        \"vatNumber\": \"NL815839091B01\"\n    },\n    \"profile\": {\n        \"name\": \"Mollie\",\n        \"url\": \"https://www.mollie.com\",\n        \"email\": \"test@mollie.com\",\n        \"phone\": \"+31208202070\",\n        \"businessCategory\": \"MONEY_SERVICES\"\n    }\n}",
-									"options": {
-										"raw": {
-											"language": "json"
-										}
-									}
-								},
-								"url": "{{apiUrl}}/onboarding/me"
-							},
-							"response": []
-						},
-						{
 							"name": "Get onboarding status",
 							"event": [
 								{
@@ -7938,6 +7929,28 @@
 									"body": "{\n    \"resource\": \"onboarding\",\n    \"name\": \"Hugo's eenzame zaak\",\n    \"signedUpAt\": \"2019-12-06T10:09:32+00:00\",\n    \"status\": \"completed\",\n    \"canReceivePayments\": true,\n    \"canReceiveSettlements\": true,\n    \"_links\": {\n        \"self\": {\n            \"href\": \"https://api.mollie.com/v2/onboarding/me\",\n            \"type\": \"application/hal+json\"\n        },\n        \"dashboard\": {\n            \"href\": \"https://www.mollie.com/dashboard/onboarding\",\n            \"type\": \"text/html\"\n        },\n        \"organization\": {\n            \"href\": \"https://api.mollie.com/v2/organization/org_7049691\",\n            \"type\": \"application/hal+json\"\n        },\n        \"documentation\": {\n            \"href\": \"https://docs.mollie.com/reference/v2/onboarding-api/get-onboarding-status\",\n            \"type\": \"text/html\"\n        }\n    }\n}"
 								}
 							]
+						},
+						{
+							"name": "Submit onboarding data",
+							"id": "fbb0a6b0-7825-4948-a973-61a0093f3ffe",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"organization\": {\n        \"name\": \"Mollie B.V.\",\n        \"address\": {\n            \"streetAndNumber\": \"Keizersgracht 126\",\n            \"postalCode\": \"1015 CW\",\n            \"city\": \"Amsterdam\",\n            \"country\": \"NL\"\n        },\n        \"registrationNumber\": \"30204462\",\n        \"vatNumber\": \"NL815839091B01\"\n    },\n    \"profile\": {\n        \"name\": \"Mollie\",\n        \"url\": \"https://www.mollie.com\",\n        \"email\": \"test@mollie.com\",\n        \"phone\": \"+31208202070\",\n        \"businessCategory\": \"MONEY_SERVICES\"\n    }\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{apiUrl}}/onboarding/me"
+							},
+							"response": []
 						}
 					],
 					"id": "373a031d-0f49-46c1-a749-eb6e9ecd738a"
