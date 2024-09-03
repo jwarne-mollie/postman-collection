@@ -2023,6 +2023,39 @@
 									"body": ""
 								},
 								{
+									"id": "696d170a-317a-468e-9f0c-9ff5a014ba69",
+									"name": "Disable ideal payment method",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [],
+										"url": "{{apiUrl}}/profiles/me/methods/ideal"
+									},
+									"status": "No Content",
+									"code": 204,
+									"_postman_previewlanguage": "plain",
+									"header": [
+										{
+											"key": "Server",
+											"value": "nginx"
+										},
+										{
+											"key": "Date",
+											"value": "Wed, 19 Jan 2022 12:39:57 GMT"
+										},
+										{
+											"key": "X-Robots-Tag",
+											"value": "noindex"
+										},
+										{
+											"key": "Strict-Transport-Security",
+											"value": "max-age=31536000; includeSubDomains; preload"
+										}
+									],
+									"cookie": [],
+									"responseTime": null,
+									"body": ""
+								},
+								{
 									"id": "d756cf50-9115-4eaf-b024-ce5d995f2bc3",
 									"name": "Delete appetiz voucher payment method",
 									"originalRequest": {
