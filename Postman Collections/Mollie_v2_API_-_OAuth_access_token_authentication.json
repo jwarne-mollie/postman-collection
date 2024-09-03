@@ -8253,19 +8253,48 @@
 									"body": "{\n    \"_embedded\": {\n        \"clients\": [\n            {\n                \"resource\": \"client\",\n                \"id\": \"org_13772481\",\n                \"commission\": {\n                    \"count\": 0\n                },\n                \"organizationCreatedAt\": \"2022-01-19T08:43:22+00:00\",\n                \"_links\": {\n                    \"self\": {\n                        \"href\": \"https://api.mollie.com/v2/clients/org_13772481\",\n                        \"type\": \"application/hal+json\"\n                    },\n                    \"organization\": {\n                        \"href\": \"https://api.mollie.com/v2/organization/org_13772481\",\n                        \"type\": \"application/hal+json\"\n                    }\n                }\n            },\n            {\n                \"resource\": \"client\",\n                \"id\": \"org_13514547\",\n                \"commission\": {\n                    \"count\": 0\n                },\n                \"organizationCreatedAt\": \"2021-12-08T15:42:58+00:00\",\n                \"_links\": {\n                    \"self\": {\n                        \"href\": \"https://api.mollie.com/v2/clients/org_13514547\",\n                        \"type\": \"application/hal+json\"\n                    },\n                    \"organization\": {\n                        \"href\": \"https://api.mollie.com/v2/organization/org_13514547\",\n                        \"type\": \"application/hal+json\"\n                    }\n                }\n            },\n            {\n                \"resource\": \"client\",\n                \"id\": \"org_7049691\",\n                \"commission\": {\n                    \"count\": 0\n                },\n                \"organizationCreatedAt\": \"2019-12-06T10:09:32+00:00\",\n                \"_links\": {\n                    \"self\": {\n                        \"href\": \"https://api.mollie.com/v2/clients/org_7049691\",\n                        \"type\": \"application/hal+json\"\n                    },\n                    \"onboarding\": {\n                        \"href\": \"https://api.mollie.com/v2/onboarding/org_7049691\",\n                        \"type\": \"application/hal+json\"\n                    },\n                    \"organization\": {\n                        \"href\": \"https://api.mollie.com/v2/organization/org_7049691\",\n                        \"type\": \"application/hal+json\"\n                    }\n                }\n            }\n        ]\n    },\n    \"count\": 3,\n    \"_links\": {\n        \"documentation\": {\n            \"href\": \"https://docs.mollie.com/reference/v2/partners-api/list-clients\",\n            \"type\": \"text/html\"\n        },\n        \"self\": {\n            \"href\": \"https://api.mollie.com/v2/clients?limit=50\",\n            \"type\": \"application/hal+json\"\n        },\n        \"previous\": null,\n        \"next\": null\n    }\n}"
 								}
 							]
+						}
+					],
+					"id": "fcae3870-b672-441b-a0f3-e1d6b50c4334",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									""
+								],
+								"id": "5e4c8708-4eea-4051-9d65-574bb9a8c292"
+							}
 						},
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									""
+								],
+								"id": "14acb11b-2c30-4166-9612-6dab9bcc3960"
+							}
+						}
+					]
+				},
+				{
+					"name": "Client Links API",
+					"item": [
 						{
 							"name": "Create client link",
 							"event": [
 								{
 									"listen": "test",
 									"script": {
+										"id": "5c7ea46e-1840-4e0f-bfa4-4fe6a5ba34bd",
 										"exec": [
 											"const response = pm.response.json();",
-											"pm.globals.set(\"clientLink\", response._links.clientLink.href);"
+											"pm.collectionVariables.set(\"clientLink\", response._links.clientLink.href);"
 										],
 										"type": "text/javascript",
-										"id": "5c7ea46e-1840-4e0f-bfa4-4fe6a5ba34bd"
+										"packages": {}
 									}
 								}
 							],
@@ -8456,29 +8485,7 @@
 							"response": []
 						}
 					],
-					"id": "fcae3870-b672-441b-a0f3-e1d6b50c4334",
-					"event": [
-						{
-							"listen": "prerequest",
-							"script": {
-								"type": "text/javascript",
-								"exec": [
-									""
-								],
-								"id": "5e4c8708-4eea-4051-9d65-574bb9a8c292"
-							}
-						},
-						{
-							"listen": "test",
-							"script": {
-								"type": "text/javascript",
-								"exec": [
-									""
-								],
-								"id": "14acb11b-2c30-4166-9612-6dab9bcc3960"
-							}
-						}
-					]
+					"id": "7423c0c1-2c65-45e9-9e7d-9e9bf66bb5e2"
 				}
 			],
 			"id": "1d0da99b-e2b6-4c98-ada6-3d6c85244d27"
