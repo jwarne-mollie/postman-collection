@@ -7941,6 +7941,544 @@
 						}
 					],
 					"id": "373a031d-0f49-46c1-a749-eb6e9ecd738a"
+				},
+				{
+					"name": "Clients API",
+					"item": [
+						{
+							"name": "Get client",
+							"id": "da8064ca-d867-4b61-80ff-e39be5d87f48",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{apiUrl}}/clients/*id*",
+									"host": [
+										"{{apiUrl}}"
+									],
+									"path": [
+										"clients",
+										"*id*"
+									],
+									"query": [
+										{
+											"key": "embed",
+											"value": "onboarding",
+											"disabled": true
+										},
+										{
+											"key": "embed",
+											"value": "organization",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"id": "be8b498f-3b82-46c1-b329-74586c350e5b",
+									"name": "Get client",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{apiUrl}}/clients/org_7049691",
+											"host": [
+												"{{apiUrl}}"
+											],
+											"path": [
+												"clients",
+												"org_7049691"
+											],
+											"query": [
+												{
+													"key": "embed",
+													"value": "onboarding",
+													"disabled": true
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Server",
+											"value": "nginx"
+										},
+										{
+											"key": "Date",
+											"value": "Wed, 19 Jan 2022 17:24:49 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/hal+json"
+										},
+										{
+											"key": "Content-Length",
+											"value": "514"
+										},
+										{
+											"key": "X-Robots-Tag",
+											"value": "noindex"
+										},
+										{
+											"key": "Strict-Transport-Security",
+											"value": "max-age=31536000; includeSubDomains; preload"
+										}
+									],
+									"cookie": [],
+									"responseTime": null,
+									"body": "{\n    \"resource\": \"client\",\n    \"id\": \"org_7049691\",\n    \"organizationCreatedAt\": \"2019-12-06T10:09:32+00:00\",\n    \"_links\": {\n        \"self\": {\n            \"href\": \"https://api.mollie.com/v2/clients/org_7049691\",\n            \"type\": \"application/hal+json\"\n        },\n        \"onboarding\": {\n            \"href\": \"https://api.mollie.com/v2/onboarding/org_7049691\",\n            \"type\": \"application/hal+json\"\n        },\n        \"organization\": {\n            \"href\": \"https://api.mollie.com/v2/organization/org_7049691\",\n            \"type\": \"application/hal+json\"\n        },\n        \"documentation\": {\n            \"href\": \"https://docs.mollie.com/reference/v2/partners-api/get-client\",\n            \"type\": \"text/html\"\n        }\n    }\n}"
+								},
+								{
+									"id": "e5816cf1-a487-4565-b4bd-01325ca1623a",
+									"name": "Get client with organization embedded",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{apiUrl}}/clients/org_7049691?embed=organization",
+											"host": [
+												"{{apiUrl}}"
+											],
+											"path": [
+												"clients",
+												"org_7049691"
+											],
+											"query": [
+												{
+													"key": "embed",
+													"value": "organization"
+												},
+												{
+													"key": "embed",
+													"value": "onboarding",
+													"disabled": true
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Server",
+											"value": "nginx"
+										},
+										{
+											"key": "Date",
+											"value": "Wed, 19 Jan 2022 17:16:54 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/hal+json"
+										},
+										{
+											"key": "Content-Length",
+											"value": "1093"
+										},
+										{
+											"key": "X-Robots-Tag",
+											"value": "noindex"
+										},
+										{
+											"key": "Strict-Transport-Security",
+											"value": "max-age=31536000; includeSubDomains; preload"
+										}
+									],
+									"cookie": [],
+									"responseTime": null,
+									"body": "{\n    \"resource\": \"client\",\n    \"id\": \"org_7049691\",\n    \"organizationCreatedAt\": \"2019-12-06T10:09:32+00:00\",\n    \"_embedded\": {\n        \"organization\": {\n            \"resource\": \"organization\",\n            \"id\": \"org_7049691\",\n            \"name\": \"Hugo's eenzame zaak\",\n            \"email\": \"[[redacted]]\",\n            \"locale\": \"en_US\",\n            \"address\": {\n                \"streetAndNumber\": \"[[redacted]]\",\n                \"postalCode\": \"[[redacted]]\",\n                \"city\": \"[[redacted]]\",\n                \"country\": \"[[redacted]]\"\n            },\n            \"registrationNumber\": \"[[redacted]]\",\n            \"vatNumber\": \"\",\n            \"vatRegulation\": \"dutch\",\n            \"verifiedAt\": \"2020-10-19T11:45:36+00:00\",\n            \"_links\": {\n                \"self\": {\n                    \"href\": \"https://api.mollie.com/v2/organization/org_7049691\",\n                    \"type\": \"application/hal+json\"\n                },\n                \"dashboard\": {\n                    \"href\": \"https://www.mollie.com/dashboard/org_7049691/\",\n                    \"type\": \"text/html\"\n                }\n            }\n        }\n    },\n    \"_links\": {\n        \"self\": {\n            \"href\": \"https://api.mollie.com/v2/clients/org_7049691\",\n            \"type\": \"application/hal+json\"\n        },\n        \"onboarding\": {\n            \"href\": \"https://api.mollie.com/v2/onboarding/org_7049691\",\n            \"type\": \"application/hal+json\"\n        },\n        \"organization\": {\n            \"href\": \"https://api.mollie.com/v2/organization/org_7049691\",\n            \"type\": \"application/hal+json\"\n        },\n        \"documentation\": {\n            \"href\": \"https://docs.mollie.com/reference/v2/partners-api/get-client\",\n            \"type\": \"text/html\"\n        }\n    }\n}"
+								},
+								{
+									"id": "25badeba-f5ed-462d-aae5-8e041ea0c72c",
+									"name": "Get client with onboarding status embedded",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{apiUrl}}/clients/org_7049691?embed=onboarding",
+											"host": [
+												"{{apiUrl}}"
+											],
+											"path": [
+												"clients",
+												"org_7049691"
+											],
+											"query": [
+												{
+													"key": "embed",
+													"value": "onboarding"
+												},
+												{
+													"key": "embed",
+													"value": "organization",
+													"disabled": true
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Server",
+											"value": "nginx"
+										},
+										{
+											"key": "Date",
+											"value": "Wed, 19 Jan 2022 17:25:57 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/hal+json"
+										},
+										{
+											"key": "Content-Length",
+											"value": "1010"
+										},
+										{
+											"key": "X-Robots-Tag",
+											"value": "noindex"
+										},
+										{
+											"key": "Strict-Transport-Security",
+											"value": "max-age=31536000; includeSubDomains; preload"
+										}
+									],
+									"cookie": [],
+									"responseTime": null,
+									"body": "{\n    \"resource\": \"client\",\n    \"id\": \"org_7049691\",\n    \"organizationCreatedAt\": \"2019-12-06T10:09:32+00:00\",\n    \"_embedded\": {\n        \"onboarding\": {\n            \"resource\": \"onboarding\",\n            \"name\": \"Hugo's eenzame zaak\",\n            \"signedUpAt\": \"2019-12-06T10:09:32+00:00\",\n            \"status\": \"completed\",\n            \"canReceivePayments\": true,\n            \"canReceiveSettlements\": true,\n            \"_links\": {\n                \"self\": {\n                    \"href\": \"https://api.mollie.com/v2/onboarding/me\",\n                    \"type\": \"application/hal+json\"\n                },\n                \"dashboard\": {\n                    \"href\": \"https://www.mollie.com/dashboard/onboarding\",\n                    \"type\": \"text/html\"\n                },\n                \"organization\": {\n                    \"href\": \"https://api.mollie.com/v2/organization/org_7049691\",\n                    \"type\": \"application/hal+json\"\n                }\n            }\n        }\n    },\n    \"_links\": {\n        \"self\": {\n            \"href\": \"https://api.mollie.com/v2/clients/org_7049691\",\n            \"type\": \"application/hal+json\"\n        },\n        \"onboarding\": {\n            \"href\": \"https://api.mollie.com/v2/onboarding/org_7049691\",\n            \"type\": \"application/hal+json\"\n        },\n        \"organization\": {\n            \"href\": \"https://api.mollie.com/v2/organization/org_7049691\",\n            \"type\": \"application/hal+json\"\n        },\n        \"documentation\": {\n            \"href\": \"https://docs.mollie.com/reference/v2/partners-api/get-client\",\n            \"type\": \"text/html\"\n        }\n    }\n}"
+								}
+							]
+						},
+						{
+							"name": "List clients",
+							"id": "00387d33-71c2-4046-92f7-210820e61e5a",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{apiUrl}}/clients",
+									"host": [
+										"{{apiUrl}}"
+									],
+									"path": [
+										"clients"
+									],
+									"query": [
+										{
+											"key": "year",
+											"value": "2021",
+											"disabled": true
+										},
+										{
+											"key": "month",
+											"value": "12",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"id": "50c8280b-1a60-4a2d-a24f-ccd5125b0ea1",
+									"name": "List clients",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{apiUrl}}/clients",
+											"host": [
+												"{{apiUrl}}"
+											],
+											"path": [
+												"clients"
+											],
+											"query": [
+												{
+													"key": "year",
+													"value": "2021",
+													"disabled": true
+												},
+												{
+													"key": "month",
+													"value": "12",
+													"disabled": true
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Server",
+											"value": "nginx"
+										},
+										{
+											"key": "Date",
+											"value": "Wed, 19 Jan 2022 17:16:31 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/hal+json"
+										},
+										{
+											"key": "Content-Length",
+											"value": "1375"
+										},
+										{
+											"key": "X-Robots-Tag",
+											"value": "noindex"
+										},
+										{
+											"key": "Strict-Transport-Security",
+											"value": "max-age=31536000; includeSubDomains; preload"
+										}
+									],
+									"cookie": [],
+									"responseTime": null,
+									"body": "{\n    \"_embedded\": {\n        \"clients\": [\n            {\n                \"resource\": \"client\",\n                \"id\": \"org_13772481\",\n                \"commission\": {\n                    \"count\": 0\n                },\n                \"organizationCreatedAt\": \"2022-01-19T08:43:22+00:00\",\n                \"_links\": {\n                    \"self\": {\n                        \"href\": \"https://api.mollie.com/v2/clients/org_13772481\",\n                        \"type\": \"application/hal+json\"\n                    },\n                    \"organization\": {\n                        \"href\": \"https://api.mollie.com/v2/organization/org_13772481\",\n                        \"type\": \"application/hal+json\"\n                    }\n                }\n            },\n            {\n                \"resource\": \"client\",\n                \"id\": \"org_13514547\",\n                \"commission\": {\n                    \"count\": 0\n                },\n                \"organizationCreatedAt\": \"2021-12-08T15:42:58+00:00\",\n                \"_links\": {\n                    \"self\": {\n                        \"href\": \"https://api.mollie.com/v2/clients/org_13514547\",\n                        \"type\": \"application/hal+json\"\n                    },\n                    \"organization\": {\n                        \"href\": \"https://api.mollie.com/v2/organization/org_13514547\",\n                        \"type\": \"application/hal+json\"\n                    }\n                }\n            },\n            {\n                \"resource\": \"client\",\n                \"id\": \"org_7049691\",\n                \"commission\": {\n                    \"count\": 0\n                },\n                \"organizationCreatedAt\": \"2019-12-06T10:09:32+00:00\",\n                \"_links\": {\n                    \"self\": {\n                        \"href\": \"https://api.mollie.com/v2/clients/org_7049691\",\n                        \"type\": \"application/hal+json\"\n                    },\n                    \"onboarding\": {\n                        \"href\": \"https://api.mollie.com/v2/onboarding/org_7049691\",\n                        \"type\": \"application/hal+json\"\n                    },\n                    \"organization\": {\n                        \"href\": \"https://api.mollie.com/v2/organization/org_7049691\",\n                        \"type\": \"application/hal+json\"\n                    }\n                }\n            }\n        ]\n    },\n    \"count\": 3,\n    \"_links\": {\n        \"documentation\": {\n            \"href\": \"https://docs.mollie.com/reference/v2/partners-api/list-clients\",\n            \"type\": \"text/html\"\n        },\n        \"self\": {\n            \"href\": \"https://api.mollie.com/v2/clients?limit=50\",\n            \"type\": \"application/hal+json\"\n        },\n        \"previous\": null,\n        \"next\": null\n    }\n}"
+								}
+							]
+						},
+						{
+							"name": "Create client link",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"const response = pm.response.json();",
+											"pm.globals.set(\"clientLink\", response._links.clientLink.href);"
+										],
+										"type": "text/javascript",
+										"id": "5c7ea46e-1840-4e0f-bfa4-4fe6a5ba34bd"
+									}
+								}
+							],
+							"id": "adf2fd5f-b826-4de9-a112-c167ade856be",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"owner\":{\n        \"email\":\"{{owner.email}}\",\n        \"givenName\": \"{{owner.givenName}}\",\n        \"familyName\":\"{{owner.familyName}}\",\n        \"locale\":\"{{owner.locale}}\"\n    },\n    \"name\":\"{{name}}\",\n    \"address\":{\n        \"streetAndNumber\":\"{{address.streetAndNumber}}\",\n        \"postalCode\":\"{{address.postalCode}}\",\n        \"city\":\"{{address.city}}\",\n        \"country\":\"{{address.country}}\"\n    },\n    \"registrationNumber\":\"{{registrationNumer}}\",\n    \"vatNumber\":\"{{vatNumber}}\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{apiUrl}}/client-links"
+							},
+							"response": [
+								{
+									"id": "24d7a24b-c1c1-4652-bfb9-da2f4e8b5aed",
+									"name": "Create client link all parameters",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"owner\":{\n        \"email\":\"test@mollie.com\",\n        \"givenName\": \"Piet\",\n        \"familyName\":\"Mondriaan\",\n        \"locale\":\"nl_NL\"\n    },\n    \"name\":\"Mollie\",\n    \"address\":{\n        \"streetAndNumber\":\"Keizersgracht 126\",\n        \"postalCode\":\"1115CW\",\n        \"city\":\"Amsterdam\",\n        \"country\":\"NL\"\n    },\n    \"registrationNumber\":\"30204462\",\n    \"vatNumber\":\"NL815839091B01\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": "{{apiUrl}}/client-links"
+									},
+									"status": "Created",
+									"code": 201,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "server",
+											"value": "nginx"
+										},
+										{
+											"key": "date",
+											"value": "Mon, 05 Jun 2023 11:57:18 GMT"
+										},
+										{
+											"key": "content-type",
+											"value": "application/hal+json"
+										},
+										{
+											"key": "content-length",
+											"value": "292"
+										},
+										{
+											"key": "x-robots-tag",
+											"value": "noindex"
+										},
+										{
+											"key": "X-XSS-Protection",
+											"value": "1; mode=block"
+										},
+										{
+											"key": "Via",
+											"value": "1.1 google"
+										},
+										{
+											"key": "Strict-Transport-Security",
+											"value": "max-age=31536000; includeSubDomains; preload"
+										},
+										{
+											"key": "Alt-Svc",
+											"value": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000"
+										}
+									],
+									"cookie": [
+										{
+											"expires": "Invalid Date"
+										}
+									],
+									"responseTime": null,
+									"body": "{\n    \"id\": \"csr_ayCz46QLwCbxpTaSYQQZH\",\n    \"resource\": \"client-link\",\n    \"_links\": {\n        \"clientLink\": {\n            \"href\": \"https://my.mollie.com/dashboard/client-link/csr_ayCz46QLwCbxpTaSYQQZH\",\n            \"type\": \"text/html\"\n        },\n        \"documentation\": {\n            \"href\": \"https://docs.mollie.com/reference/v2/clients-api/create-client\",\n            \"type\": \"text/html\"\n        }\n    }\n}"
+								},
+								{
+									"id": "06d8d00d-c7f4-4176-adf8-a048a715b090",
+									"name": "Create client link minimal requirements",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"owner\":{\n        \"email\":\"test@mollie.com\",\n        \"givenName\": \"Piet\",\n        \"familyName\":\"Mondriaan\"\n    },\n    \"name\":\"Mollie\",\n    \"address\":{\n        \"country\":\"NL\"\n    }\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": "{{apiUrl}}/client-links"
+									},
+									"status": "Created",
+									"code": 201,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "server",
+											"value": "nginx"
+										},
+										{
+											"key": "date",
+											"value": "Mon, 05 Jun 2023 11:57:18 GMT"
+										},
+										{
+											"key": "content-type",
+											"value": "application/hal+json"
+										},
+										{
+											"key": "content-length",
+											"value": "292"
+										},
+										{
+											"key": "x-robots-tag",
+											"value": "noindex"
+										},
+										{
+											"key": "X-XSS-Protection",
+											"value": "1; mode=block"
+										},
+										{
+											"key": "Via",
+											"value": "1.1 google"
+										},
+										{
+											"key": "Strict-Transport-Security",
+											"value": "max-age=31536000; includeSubDomains; preload"
+										},
+										{
+											"key": "Alt-Svc",
+											"value": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000"
+										}
+									],
+									"cookie": [
+										{
+											"expires": "Invalid Date"
+										}
+									],
+									"responseTime": null,
+									"body": "{\n    \"id\": \"csr_ayCz46QLwCbxpTaSYQQZH\",\n    \"resource\": \"client-link\",\n    \"_links\": {\n        \"clientLink\": {\n            \"href\": \"https://my.mollie.com/dashboard/client-link/csr_ayCz46QLwCbxpTaSYQQZH\",\n            \"type\": \"text/html\"\n        },\n        \"documentation\": {\n            \"href\": \"https://docs.mollie.com/reference/v2/clients-api/create-client\",\n            \"type\": \"text/html\"\n        }\n    }\n}"
+								}
+							]
+						},
+						{
+							"name": "Generate client link",
+							"id": "effa97d1-d358-463c-abca-e5a1042ef7ec",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{clientLink}}?client_id={{clientId}}&scope={{scopes}}&state={{$guid}}",
+									"host": [
+										"{{clientLink}}"
+									],
+									"query": [
+										{
+											"key": "client_id",
+											"value": "{{clientId}}",
+											"description": "app client id"
+										},
+										{
+											"key": "scope",
+											"value": "{{scopes}}"
+										},
+										{
+											"key": "state",
+											"value": "{{$guid}}"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"id": "fcae3870-b672-441b-a0f3-e1d6b50c4334",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									""
+								],
+								"id": "5e4c8708-4eea-4051-9d65-574bb9a8c292"
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									""
+								],
+								"id": "14acb11b-2c30-4166-9612-6dab9bcc3960"
+							}
+						}
+					]
 				}
 			],
 			"id": "1d0da99b-e2b6-4c98-ada6-3d6c85244d27"
@@ -9151,578 +9689,6 @@
 				}
 			],
 			"id": "0fccab70-51e3-4bdd-a1bb-79237706fb18"
-		},
-		{
-			"name": "Partners",
-			"item": [
-				{
-					"name": "Clients API",
-					"item": [
-						{
-							"name": "Get client",
-							"id": "da8064ca-d867-4b61-80ff-e39be5d87f48",
-							"protocolProfileBehavior": {
-								"disableBodyPruning": true
-							},
-							"request": {
-								"method": "GET",
-								"header": [],
-								"url": {
-									"raw": "{{apiUrl}}/clients/*id*",
-									"host": [
-										"{{apiUrl}}"
-									],
-									"path": [
-										"clients",
-										"*id*"
-									],
-									"query": [
-										{
-											"key": "embed",
-											"value": "onboarding",
-											"disabled": true
-										},
-										{
-											"key": "embed",
-											"value": "organization",
-											"disabled": true
-										}
-									]
-								}
-							},
-							"response": [
-								{
-									"id": "be8b498f-3b82-46c1-b329-74586c350e5b",
-									"name": "Get client",
-									"originalRequest": {
-										"method": "GET",
-										"header": [],
-										"url": {
-											"raw": "{{apiUrl}}/clients/org_7049691",
-											"host": [
-												"{{apiUrl}}"
-											],
-											"path": [
-												"clients",
-												"org_7049691"
-											],
-											"query": [
-												{
-													"key": "embed",
-													"value": "onboarding",
-													"disabled": true
-												}
-											]
-										}
-									},
-									"status": "OK",
-									"code": 200,
-									"_postman_previewlanguage": "json",
-									"header": [
-										{
-											"key": "Server",
-											"value": "nginx"
-										},
-										{
-											"key": "Date",
-											"value": "Wed, 19 Jan 2022 17:24:49 GMT"
-										},
-										{
-											"key": "Content-Type",
-											"value": "application/hal+json"
-										},
-										{
-											"key": "Content-Length",
-											"value": "514"
-										},
-										{
-											"key": "X-Robots-Tag",
-											"value": "noindex"
-										},
-										{
-											"key": "Strict-Transport-Security",
-											"value": "max-age=31536000; includeSubDomains; preload"
-										}
-									],
-									"cookie": [],
-									"responseTime": null,
-									"body": "{\n    \"resource\": \"client\",\n    \"id\": \"org_7049691\",\n    \"organizationCreatedAt\": \"2019-12-06T10:09:32+00:00\",\n    \"_links\": {\n        \"self\": {\n            \"href\": \"https://api.mollie.com/v2/clients/org_7049691\",\n            \"type\": \"application/hal+json\"\n        },\n        \"onboarding\": {\n            \"href\": \"https://api.mollie.com/v2/onboarding/org_7049691\",\n            \"type\": \"application/hal+json\"\n        },\n        \"organization\": {\n            \"href\": \"https://api.mollie.com/v2/organization/org_7049691\",\n            \"type\": \"application/hal+json\"\n        },\n        \"documentation\": {\n            \"href\": \"https://docs.mollie.com/reference/v2/partners-api/get-client\",\n            \"type\": \"text/html\"\n        }\n    }\n}"
-								},
-								{
-									"id": "e5816cf1-a487-4565-b4bd-01325ca1623a",
-									"name": "Get client with organization embedded",
-									"originalRequest": {
-										"method": "GET",
-										"header": [],
-										"url": {
-											"raw": "{{apiUrl}}/clients/org_7049691?embed=organization",
-											"host": [
-												"{{apiUrl}}"
-											],
-											"path": [
-												"clients",
-												"org_7049691"
-											],
-											"query": [
-												{
-													"key": "embed",
-													"value": "organization"
-												},
-												{
-													"key": "embed",
-													"value": "onboarding",
-													"disabled": true
-												}
-											]
-										}
-									},
-									"status": "OK",
-									"code": 200,
-									"_postman_previewlanguage": "json",
-									"header": [
-										{
-											"key": "Server",
-											"value": "nginx"
-										},
-										{
-											"key": "Date",
-											"value": "Wed, 19 Jan 2022 17:16:54 GMT"
-										},
-										{
-											"key": "Content-Type",
-											"value": "application/hal+json"
-										},
-										{
-											"key": "Content-Length",
-											"value": "1093"
-										},
-										{
-											"key": "X-Robots-Tag",
-											"value": "noindex"
-										},
-										{
-											"key": "Strict-Transport-Security",
-											"value": "max-age=31536000; includeSubDomains; preload"
-										}
-									],
-									"cookie": [],
-									"responseTime": null,
-									"body": "{\n    \"resource\": \"client\",\n    \"id\": \"org_7049691\",\n    \"organizationCreatedAt\": \"2019-12-06T10:09:32+00:00\",\n    \"_embedded\": {\n        \"organization\": {\n            \"resource\": \"organization\",\n            \"id\": \"org_7049691\",\n            \"name\": \"Hugo's eenzame zaak\",\n            \"email\": \"[[redacted]]\",\n            \"locale\": \"en_US\",\n            \"address\": {\n                \"streetAndNumber\": \"[[redacted]]\",\n                \"postalCode\": \"[[redacted]]\",\n                \"city\": \"[[redacted]]\",\n                \"country\": \"[[redacted]]\"\n            },\n            \"registrationNumber\": \"[[redacted]]\",\n            \"vatNumber\": \"\",\n            \"vatRegulation\": \"dutch\",\n            \"verifiedAt\": \"2020-10-19T11:45:36+00:00\",\n            \"_links\": {\n                \"self\": {\n                    \"href\": \"https://api.mollie.com/v2/organization/org_7049691\",\n                    \"type\": \"application/hal+json\"\n                },\n                \"dashboard\": {\n                    \"href\": \"https://www.mollie.com/dashboard/org_7049691/\",\n                    \"type\": \"text/html\"\n                }\n            }\n        }\n    },\n    \"_links\": {\n        \"self\": {\n            \"href\": \"https://api.mollie.com/v2/clients/org_7049691\",\n            \"type\": \"application/hal+json\"\n        },\n        \"onboarding\": {\n            \"href\": \"https://api.mollie.com/v2/onboarding/org_7049691\",\n            \"type\": \"application/hal+json\"\n        },\n        \"organization\": {\n            \"href\": \"https://api.mollie.com/v2/organization/org_7049691\",\n            \"type\": \"application/hal+json\"\n        },\n        \"documentation\": {\n            \"href\": \"https://docs.mollie.com/reference/v2/partners-api/get-client\",\n            \"type\": \"text/html\"\n        }\n    }\n}"
-								},
-								{
-									"id": "25badeba-f5ed-462d-aae5-8e041ea0c72c",
-									"name": "Get client with onboarding status embedded",
-									"originalRequest": {
-										"method": "GET",
-										"header": [],
-										"url": {
-											"raw": "{{apiUrl}}/clients/org_7049691?embed=onboarding",
-											"host": [
-												"{{apiUrl}}"
-											],
-											"path": [
-												"clients",
-												"org_7049691"
-											],
-											"query": [
-												{
-													"key": "embed",
-													"value": "onboarding"
-												},
-												{
-													"key": "embed",
-													"value": "organization",
-													"disabled": true
-												}
-											]
-										}
-									},
-									"status": "OK",
-									"code": 200,
-									"_postman_previewlanguage": "json",
-									"header": [
-										{
-											"key": "Server",
-											"value": "nginx"
-										},
-										{
-											"key": "Date",
-											"value": "Wed, 19 Jan 2022 17:25:57 GMT"
-										},
-										{
-											"key": "Content-Type",
-											"value": "application/hal+json"
-										},
-										{
-											"key": "Content-Length",
-											"value": "1010"
-										},
-										{
-											"key": "X-Robots-Tag",
-											"value": "noindex"
-										},
-										{
-											"key": "Strict-Transport-Security",
-											"value": "max-age=31536000; includeSubDomains; preload"
-										}
-									],
-									"cookie": [],
-									"responseTime": null,
-									"body": "{\n    \"resource\": \"client\",\n    \"id\": \"org_7049691\",\n    \"organizationCreatedAt\": \"2019-12-06T10:09:32+00:00\",\n    \"_embedded\": {\n        \"onboarding\": {\n            \"resource\": \"onboarding\",\n            \"name\": \"Hugo's eenzame zaak\",\n            \"signedUpAt\": \"2019-12-06T10:09:32+00:00\",\n            \"status\": \"completed\",\n            \"canReceivePayments\": true,\n            \"canReceiveSettlements\": true,\n            \"_links\": {\n                \"self\": {\n                    \"href\": \"https://api.mollie.com/v2/onboarding/me\",\n                    \"type\": \"application/hal+json\"\n                },\n                \"dashboard\": {\n                    \"href\": \"https://www.mollie.com/dashboard/onboarding\",\n                    \"type\": \"text/html\"\n                },\n                \"organization\": {\n                    \"href\": \"https://api.mollie.com/v2/organization/org_7049691\",\n                    \"type\": \"application/hal+json\"\n                }\n            }\n        }\n    },\n    \"_links\": {\n        \"self\": {\n            \"href\": \"https://api.mollie.com/v2/clients/org_7049691\",\n            \"type\": \"application/hal+json\"\n        },\n        \"onboarding\": {\n            \"href\": \"https://api.mollie.com/v2/onboarding/org_7049691\",\n            \"type\": \"application/hal+json\"\n        },\n        \"organization\": {\n            \"href\": \"https://api.mollie.com/v2/organization/org_7049691\",\n            \"type\": \"application/hal+json\"\n        },\n        \"documentation\": {\n            \"href\": \"https://docs.mollie.com/reference/v2/partners-api/get-client\",\n            \"type\": \"text/html\"\n        }\n    }\n}"
-								}
-							]
-						},
-						{
-							"name": "List clients",
-							"id": "00387d33-71c2-4046-92f7-210820e61e5a",
-							"protocolProfileBehavior": {
-								"disableBodyPruning": true
-							},
-							"request": {
-								"method": "GET",
-								"header": [],
-								"url": {
-									"raw": "{{apiUrl}}/clients",
-									"host": [
-										"{{apiUrl}}"
-									],
-									"path": [
-										"clients"
-									],
-									"query": [
-										{
-											"key": "year",
-											"value": "2021",
-											"disabled": true
-										},
-										{
-											"key": "month",
-											"value": "12",
-											"disabled": true
-										}
-									]
-								}
-							},
-							"response": [
-								{
-									"id": "50c8280b-1a60-4a2d-a24f-ccd5125b0ea1",
-									"name": "List clients",
-									"originalRequest": {
-										"method": "GET",
-										"header": [],
-										"url": {
-											"raw": "{{apiUrl}}/clients",
-											"host": [
-												"{{apiUrl}}"
-											],
-											"path": [
-												"clients"
-											],
-											"query": [
-												{
-													"key": "year",
-													"value": "2021",
-													"disabled": true
-												},
-												{
-													"key": "month",
-													"value": "12",
-													"disabled": true
-												}
-											]
-										}
-									},
-									"status": "OK",
-									"code": 200,
-									"_postman_previewlanguage": "json",
-									"header": [
-										{
-											"key": "Server",
-											"value": "nginx"
-										},
-										{
-											"key": "Date",
-											"value": "Wed, 19 Jan 2022 17:16:31 GMT"
-										},
-										{
-											"key": "Content-Type",
-											"value": "application/hal+json"
-										},
-										{
-											"key": "Content-Length",
-											"value": "1375"
-										},
-										{
-											"key": "X-Robots-Tag",
-											"value": "noindex"
-										},
-										{
-											"key": "Strict-Transport-Security",
-											"value": "max-age=31536000; includeSubDomains; preload"
-										}
-									],
-									"cookie": [],
-									"responseTime": null,
-									"body": "{\n    \"_embedded\": {\n        \"clients\": [\n            {\n                \"resource\": \"client\",\n                \"id\": \"org_13772481\",\n                \"commission\": {\n                    \"count\": 0\n                },\n                \"organizationCreatedAt\": \"2022-01-19T08:43:22+00:00\",\n                \"_links\": {\n                    \"self\": {\n                        \"href\": \"https://api.mollie.com/v2/clients/org_13772481\",\n                        \"type\": \"application/hal+json\"\n                    },\n                    \"organization\": {\n                        \"href\": \"https://api.mollie.com/v2/organization/org_13772481\",\n                        \"type\": \"application/hal+json\"\n                    }\n                }\n            },\n            {\n                \"resource\": \"client\",\n                \"id\": \"org_13514547\",\n                \"commission\": {\n                    \"count\": 0\n                },\n                \"organizationCreatedAt\": \"2021-12-08T15:42:58+00:00\",\n                \"_links\": {\n                    \"self\": {\n                        \"href\": \"https://api.mollie.com/v2/clients/org_13514547\",\n                        \"type\": \"application/hal+json\"\n                    },\n                    \"organization\": {\n                        \"href\": \"https://api.mollie.com/v2/organization/org_13514547\",\n                        \"type\": \"application/hal+json\"\n                    }\n                }\n            },\n            {\n                \"resource\": \"client\",\n                \"id\": \"org_7049691\",\n                \"commission\": {\n                    \"count\": 0\n                },\n                \"organizationCreatedAt\": \"2019-12-06T10:09:32+00:00\",\n                \"_links\": {\n                    \"self\": {\n                        \"href\": \"https://api.mollie.com/v2/clients/org_7049691\",\n                        \"type\": \"application/hal+json\"\n                    },\n                    \"onboarding\": {\n                        \"href\": \"https://api.mollie.com/v2/onboarding/org_7049691\",\n                        \"type\": \"application/hal+json\"\n                    },\n                    \"organization\": {\n                        \"href\": \"https://api.mollie.com/v2/organization/org_7049691\",\n                        \"type\": \"application/hal+json\"\n                    }\n                }\n            }\n        ]\n    },\n    \"count\": 3,\n    \"_links\": {\n        \"documentation\": {\n            \"href\": \"https://docs.mollie.com/reference/v2/partners-api/list-clients\",\n            \"type\": \"text/html\"\n        },\n        \"self\": {\n            \"href\": \"https://api.mollie.com/v2/clients?limit=50\",\n            \"type\": \"application/hal+json\"\n        },\n        \"previous\": null,\n        \"next\": null\n    }\n}"
-								}
-							]
-						},
-						{
-							"name": "Create client link",
-							"event": [
-								{
-									"listen": "test",
-									"script": {
-										"exec": [
-											"const response = pm.response.json();",
-											"pm.globals.set(\"clientLink\", response._links.clientLink.href);"
-										],
-										"type": "text/javascript",
-										"id": "5c7ea46e-1840-4e0f-bfa4-4fe6a5ba34bd"
-									}
-								}
-							],
-							"id": "adf2fd5f-b826-4de9-a112-c167ade856be",
-							"protocolProfileBehavior": {
-								"disableBodyPruning": true
-							},
-							"request": {
-								"method": "POST",
-								"header": [],
-								"body": {
-									"mode": "raw",
-									"raw": "{\n    \"owner\":{\n        \"email\":\"{{owner.email}}\",\n        \"givenName\": \"{{owner.givenName}}\",\n        \"familyName\":\"{{owner.familyName}}\",\n        \"locale\":\"{{owner.locale}}\"\n    },\n    \"name\":\"{{name}}\",\n    \"address\":{\n        \"streetAndNumber\":\"{{address.streetAndNumber}}\",\n        \"postalCode\":\"{{address.postalCode}}\",\n        \"city\":\"{{address.city}}\",\n        \"country\":\"{{address.country}}\"\n    },\n    \"registrationNumber\":\"{{registrationNumer}}\",\n    \"vatNumber\":\"{{vatNumber}}\"\n}",
-									"options": {
-										"raw": {
-											"language": "json"
-										}
-									}
-								},
-								"url": "{{apiUrl}}/client-links"
-							},
-							"response": [
-								{
-									"id": "24d7a24b-c1c1-4652-bfb9-da2f4e8b5aed",
-									"name": "Create client link all parameters",
-									"originalRequest": {
-										"method": "POST",
-										"header": [],
-										"body": {
-											"mode": "raw",
-											"raw": "{\n    \"owner\":{\n        \"email\":\"test@mollie.com\",\n        \"givenName\": \"Piet\",\n        \"familyName\":\"Mondriaan\",\n        \"locale\":\"nl_NL\"\n    },\n    \"name\":\"Mollie\",\n    \"address\":{\n        \"streetAndNumber\":\"Keizersgracht 126\",\n        \"postalCode\":\"1115CW\",\n        \"city\":\"Amsterdam\",\n        \"country\":\"NL\"\n    },\n    \"registrationNumber\":\"30204462\",\n    \"vatNumber\":\"NL815839091B01\"\n}",
-											"options": {
-												"raw": {
-													"language": "json"
-												}
-											}
-										},
-										"url": "{{apiUrl}}/client-links"
-									},
-									"status": "Created",
-									"code": 201,
-									"_postman_previewlanguage": "json",
-									"header": [
-										{
-											"key": "server",
-											"value": "nginx"
-										},
-										{
-											"key": "date",
-											"value": "Mon, 05 Jun 2023 11:57:18 GMT"
-										},
-										{
-											"key": "content-type",
-											"value": "application/hal+json"
-										},
-										{
-											"key": "content-length",
-											"value": "292"
-										},
-										{
-											"key": "x-robots-tag",
-											"value": "noindex"
-										},
-										{
-											"key": "X-XSS-Protection",
-											"value": "1; mode=block"
-										},
-										{
-											"key": "Via",
-											"value": "1.1 google"
-										},
-										{
-											"key": "Strict-Transport-Security",
-											"value": "max-age=31536000; includeSubDomains; preload"
-										},
-										{
-											"key": "Alt-Svc",
-											"value": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000"
-										}
-									],
-									"cookie": [
-										{
-											"expires": "Invalid Date"
-										}
-									],
-									"responseTime": null,
-									"body": "{\n    \"id\": \"csr_ayCz46QLwCbxpTaSYQQZH\",\n    \"resource\": \"client-link\",\n    \"_links\": {\n        \"clientLink\": {\n            \"href\": \"https://my.mollie.com/dashboard/client-link/csr_ayCz46QLwCbxpTaSYQQZH\",\n            \"type\": \"text/html\"\n        },\n        \"documentation\": {\n            \"href\": \"https://docs.mollie.com/reference/v2/clients-api/create-client\",\n            \"type\": \"text/html\"\n        }\n    }\n}"
-								},
-								{
-									"id": "06d8d00d-c7f4-4176-adf8-a048a715b090",
-									"name": "Create client link minimal requirements",
-									"originalRequest": {
-										"method": "POST",
-										"header": [],
-										"body": {
-											"mode": "raw",
-											"raw": "{\n    \"owner\":{\n        \"email\":\"test@mollie.com\",\n        \"givenName\": \"Piet\",\n        \"familyName\":\"Mondriaan\"\n    },\n    \"name\":\"Mollie\",\n    \"address\":{\n        \"country\":\"NL\"\n    }\n}",
-											"options": {
-												"raw": {
-													"language": "json"
-												}
-											}
-										},
-										"url": "{{apiUrl}}/client-links"
-									},
-									"status": "Created",
-									"code": 201,
-									"_postman_previewlanguage": "json",
-									"header": [
-										{
-											"key": "server",
-											"value": "nginx"
-										},
-										{
-											"key": "date",
-											"value": "Mon, 05 Jun 2023 11:57:18 GMT"
-										},
-										{
-											"key": "content-type",
-											"value": "application/hal+json"
-										},
-										{
-											"key": "content-length",
-											"value": "292"
-										},
-										{
-											"key": "x-robots-tag",
-											"value": "noindex"
-										},
-										{
-											"key": "X-XSS-Protection",
-											"value": "1; mode=block"
-										},
-										{
-											"key": "Via",
-											"value": "1.1 google"
-										},
-										{
-											"key": "Strict-Transport-Security",
-											"value": "max-age=31536000; includeSubDomains; preload"
-										},
-										{
-											"key": "Alt-Svc",
-											"value": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000"
-										}
-									],
-									"cookie": [
-										{
-											"expires": "Invalid Date"
-										}
-									],
-									"responseTime": null,
-									"body": "{\n    \"id\": \"csr_ayCz46QLwCbxpTaSYQQZH\",\n    \"resource\": \"client-link\",\n    \"_links\": {\n        \"clientLink\": {\n            \"href\": \"https://my.mollie.com/dashboard/client-link/csr_ayCz46QLwCbxpTaSYQQZH\",\n            \"type\": \"text/html\"\n        },\n        \"documentation\": {\n            \"href\": \"https://docs.mollie.com/reference/v2/clients-api/create-client\",\n            \"type\": \"text/html\"\n        }\n    }\n}"
-								}
-							]
-						},
-						{
-							"name": "Generate client link",
-							"id": "effa97d1-d358-463c-abca-e5a1042ef7ec",
-							"protocolProfileBehavior": {
-								"disableBodyPruning": true
-							},
-							"request": {
-								"method": "GET",
-								"header": [],
-								"url": {
-									"raw": "{{clientLink}}?client_id={{clientId}}&scope={{scopes}}&state={{$guid}}",
-									"host": [
-										"{{clientLink}}"
-									],
-									"query": [
-										{
-											"key": "client_id",
-											"value": "{{clientId}}",
-											"description": "app client id"
-										},
-										{
-											"key": "scope",
-											"value": "{{scopes}}"
-										},
-										{
-											"key": "state",
-											"value": "{{$guid}}"
-										}
-									]
-								}
-							},
-							"response": []
-						}
-					],
-					"id": "fcae3870-b672-441b-a0f3-e1d6b50c4334",
-					"event": [
-						{
-							"listen": "prerequest",
-							"script": {
-								"type": "text/javascript",
-								"exec": [
-									""
-								],
-								"id": "5e4c8708-4eea-4051-9d65-574bb9a8c292"
-							}
-						},
-						{
-							"listen": "test",
-							"script": {
-								"type": "text/javascript",
-								"exec": [
-									""
-								],
-								"id": "14acb11b-2c30-4166-9612-6dab9bcc3960"
-							}
-						}
-					]
-				}
-			],
-			"id": "a0be39d6-e0ee-49cb-b72d-74202d510180",
-			"auth": {
-				"type": "bearer",
-				"bearer": {
-					"token": "{{partner_Access_token}}"
-				}
-			},
-			"event": [
-				{
-					"listen": "prerequest",
-					"script": {
-						"type": "text/javascript",
-						"exec": [
-							""
-						],
-						"id": "8e9f83cf-c58c-4e5c-8d8b-fe7f2f408100"
-					}
-				},
-				{
-					"listen": "test",
-					"script": {
-						"type": "text/javascript",
-						"exec": [
-							""
-						],
-						"id": "89bcb844-c28c-4acc-91e7-2bb5bc58587a"
-					}
-				}
-			]
 		}
 	],
 	"auth": {
