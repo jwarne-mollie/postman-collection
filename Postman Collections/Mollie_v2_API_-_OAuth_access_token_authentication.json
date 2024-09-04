@@ -1762,7 +1762,7 @@
 									"originalRequest": {
 										"method": "POST",
 										"header": [],
-										"url": "{{apiUrl}}/profiles/pfl_2q3RyuMGry/methods/creditcard"
+										"url": "{{apiUrl}}/profiles/{{profileId}}/methods/creditcard"
 									},
 									"status": "Created",
 									"code": 201,
@@ -1803,7 +1803,7 @@
 									"originalRequest": {
 										"method": "POST",
 										"header": [],
-										"url": "{{apiUrl}}/profiles/pfl_2q3RyuMGry/methods/ideal"
+										"url": "{{apiUrl}}/profiles/{{profileId}}/methods/ideal"
 									},
 									"status": "Created",
 									"code": 201,
@@ -1837,97 +1837,6 @@
 									"cookie": [],
 									"responseTime": null,
 									"body": "{\n    \"resource\": \"method\",\n    \"id\": \"ideal\",\n    \"description\": \"iDEAL\",\n    \"minimumAmount\": {\n        \"value\": \"0.01\",\n        \"currency\": \"EUR\"\n    },\n    \"maximumAmount\": {\n        \"value\": \"50000.00\",\n        \"currency\": \"EUR\"\n    },\n    \"image\": {\n        \"size1x\": \"https://www.mollie.com/external/icons/payment-methods/ideal.png\",\n        \"size2x\": \"https://www.mollie.com/external/icons/payment-methods/ideal%402x.png\",\n        \"svg\": \"https://www.mollie.com/external/icons/payment-methods/ideal.svg\"\n    },\n    \"status\": \"pending-review\",\n    \"_links\": {\n        \"self\": {\n            \"href\": \"https://api.mollie.com/v2/methods/ideal\",\n            \"type\": \"application/hal+json\"\n        },\n        \"documentation\": {\n            \"href\": \"https://docs.mollie.com/reference/v2/profiles-api/enable-method\",\n            \"type\": \"text/html\"\n        }\n    }\n}"
-								},
-								{
-									"id": "a4f6c90d-22a1-44a1-8a6f-f65ec77a68bf",
-									"name": "Enable appetiz vouchers",
-									"originalRequest": {
-										"method": "POST",
-										"header": [],
-										"body": {
-											"mode": "raw",
-											"raw": "{\n    \"contractId\":\"abc123\"\n}",
-											"options": {
-												"raw": {
-													"language": "json"
-												}
-											}
-										},
-										"url": "{{apiUrl}}/profiles/pfl_2q3RyuMGry/methods/voucher/issuers/appetiz"
-									},
-									"status": "Created",
-									"code": 201,
-									"_postman_previewlanguage": "json",
-									"header": [
-										{
-											"key": "Server",
-											"value": "nginx"
-										},
-										{
-											"key": "Date",
-											"value": "Wed, 19 Jan 2022 12:45:23 GMT"
-										},
-										{
-											"key": "Content-Type",
-											"value": "application/hal+json"
-										},
-										{
-											"key": "Content-Length",
-											"value": "608"
-										},
-										{
-											"key": "X-Robots-Tag",
-											"value": "noindex"
-										},
-										{
-											"key": "Strict-Transport-Security",
-											"value": "max-age=31536000; includeSubDomains; preload"
-										}
-									],
-									"cookie": [],
-									"responseTime": null,
-									"body": "{\n    \"resource\": \"issuer\",\n    \"id\": \"appetiz\",\n    \"name\": \"Appetiz\",\n    \"image\": {\n        \"size1x\": \"https://www.mollie.com/external/icons/voucher-issuers/appetiz.png\",\n        \"size2x\": \"https://www.mollie.com/external/icons/voucher-issuers/appetiz%402x.png\",\n        \"svg\": \"https://www.mollie.com/external/icons/voucher-issuers/appetiz.svg\"\n    },\n    \"status\": \"pending-issuer\",\n    \"contractor\": {\n        \"id\": \"Conecs\",\n        \"name\": \"Conecs\",\n        \"contractId\": \"abc123\"\n    },\n    \"_links\": {\n        \"self\": {\n            \"href\": \"https://api.mollie.com/v2/issuers/appetiz\",\n            \"type\": \"application/hal+json\"\n        },\n        \"documentation\": {\n            \"href\": \"https://docs.mollie.com/reference/v2/profiles-api/enable-voucher-issuer\",\n            \"type\": \"text/html\"\n        }\n    }\n}"
-								},
-								{
-									"id": "4b3cae9a-3d57-4730-bdad-c5e4039ae244",
-									"name": "Enable festivalkado giftcard payment method",
-									"originalRequest": {
-										"method": "POST",
-										"header": [],
-										"url": "{{apiUrl}}/profiles/pfl_2q3RyuMGry/methods/giftcard/issuers/festivalcadeau"
-									},
-									"status": "Created",
-									"code": 201,
-									"_postman_previewlanguage": "json",
-									"header": [
-										{
-											"key": "Server",
-											"value": "nginx"
-										},
-										{
-											"key": "Date",
-											"value": "Wed, 19 Jan 2022 12:41:46 GMT"
-										},
-										{
-											"key": "Content-Type",
-											"value": "application/hal+json"
-										},
-										{
-											"key": "Content-Length",
-											"value": "335"
-										},
-										{
-											"key": "X-Robots-Tag",
-											"value": "noindex"
-										},
-										{
-											"key": "Strict-Transport-Security",
-											"value": "max-age=31536000; includeSubDomains; preload"
-										}
-									],
-									"cookie": [],
-									"responseTime": null,
-									"body": "{\n    \"resource\": \"issuer\",\n    \"id\": \"festivalcadeau\",\n    \"description\": \"FestivalCadeau Giftcard\",\n    \"status\": \"pending-issuer\",\n    \"_links\": {\n        \"self\": {\n            \"href\": \"https://api.mollie.com/v2/issuer/festivalcadeau\",\n            \"type\": \"application/hal+json\"\n        },\n        \"documentation\": {\n            \"href\": \"https://docs.mollie.com/reference/v2/profiles-api/enable-giftcard-issuer\",\n            \"type\": \"text/html\"\n        }\n    }\n}"
 								}
 							]
 						},
@@ -1949,7 +1858,7 @@
 									"originalRequest": {
 										"method": "DELETE",
 										"header": [],
-										"url": "{{apiUrl}}/profiles/pfl_2q3RyuMGry/methods/creditcard"
+										"url": "{{apiUrl}}/profiles/{{profileId}}/methods/creditcard"
 									},
 									"status": "No Content",
 									"code": 204,
@@ -1982,7 +1891,7 @@
 									"originalRequest": {
 										"method": "DELETE",
 										"header": [],
-										"url": "{{apiUrl}}/profiles/pfl_2q3RyuMGry/methods/ideal"
+										"url": "{{apiUrl}}/profiles/{{profileId}}/methods/ideal"
 									},
 									"status": "No Content",
 									"code": 204,
@@ -2008,72 +1917,132 @@
 									"cookie": [],
 									"responseTime": null,
 									"body": ""
-								},
+								}
+							]
+						},
+						{
+							"name": "Enable payment method issuer",
+							"id": "e645ee4d-8a6c-4f7b-9d7f-6a51ff1d1762",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "POST",
+								"header": [],
+								"url": "{{apiUrl}}/profiles/{{profileId}}/methods/*methodId*/issuers/*id*"
+							},
+							"response": [
 								{
-									"id": "b3cc24c8-8aad-4037-bc79-194803971e8e",
-									"name": "Delete appetiz voucher payment method",
+									"id": "2bbf382f-57e6-4438-80de-adf7be80f527",
+									"name": "Enable giftcard",
 									"originalRequest": {
-										"method": "DELETE",
-										"header": [],
-										"url": "{{apiUrl}}/profiles/pfl_2q3RyuMGry/methods/voucher/issuers/appetiz"
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"contractId\": \"yourcontractid\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": "{{apiUrl}}/profiles/{{profileId}}/methods/giftcard/issuers/*id*"
 									},
-									"status": "No Content",
-									"code": 204,
-									"_postman_previewlanguage": "plain",
-									"header": [
-										{
-											"key": "Server",
-											"value": "nginx"
-										},
-										{
-											"key": "Date",
-											"value": "Wed, 19 Jan 2022 12:46:13 GMT"
-										},
-										{
-											"key": "X-Robots-Tag",
-											"value": "noindex"
-										},
-										{
-											"key": "Strict-Transport-Security",
-											"value": "max-age=31536000; includeSubDomains; preload"
-										}
-									],
+									"_postman_previewlanguage": null,
+									"header": null,
 									"cookie": [],
 									"responseTime": null,
-									"body": ""
+									"body": null
 								},
 								{
-									"id": "34bfb0c5-dc94-46bd-b02d-497d0e9c9841",
-									"name": "Disable festivalkado giftcard payment method",
+									"id": "f7e77329-e91b-421c-8dde-42a0864a9c4f",
+									"name": "Enable voucher",
 									"originalRequest": {
-										"method": "DELETE",
-										"header": [],
-										"url": "{{apiUrl}}/profiles/pfl_2q3RyuMGry/methods/giftcard/issuers/festivalcadeau"
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"contractId\": \"yourcontractid\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": "{{apiUrl}}/profiles/{{profileId}}/methods/voucher/issuers/*id*"
 									},
-									"status": "No Content",
-									"code": 204,
-									"_postman_previewlanguage": "plain",
-									"header": [
-										{
-											"key": "Server",
-											"value": "nginx"
-										},
-										{
-											"key": "Date",
-											"value": "Wed, 19 Jan 2022 12:42:23 GMT"
-										},
-										{
-											"key": "X-Robots-Tag",
-											"value": "noindex"
-										},
-										{
-											"key": "Strict-Transport-Security",
-											"value": "max-age=31536000; includeSubDomains; preload"
-										}
-									],
+									"_postman_previewlanguage": null,
+									"header": null,
 									"cookie": [],
 									"responseTime": null,
-									"body": ""
+									"body": null
+								}
+							]
+						},
+						{
+							"name": "Disable payment method issuer",
+							"id": "2c37a2d0-4737-4560-8dc0-c04483244bcf",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": "{{apiUrl}}/profiles/{{profileId}}/methods/*methodId*/issuers/*id*"
+							},
+							"response": [
+								{
+									"id": "81c02c6a-5723-4717-a4c6-b652e8b3c29f",
+									"name": "Disable giftcard",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json",
+												"type": "text"
+											}
+										],
+										"url": "{{apiUrl}}/profiles/{{profileId}}/methods/giftcard/issuers/*id*"
+									},
+									"_postman_previewlanguage": null,
+									"header": null,
+									"cookie": [],
+									"responseTime": null,
+									"body": null
+								},
+								{
+									"id": "c138e7d5-5307-4c3b-a75a-e29b65bd8cbe",
+									"name": "Disable voucher",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json",
+												"type": "text"
+											}
+										],
+										"url": "{{apiUrl}}/profiles/{{profileId}}/methods/voucher/issuers/*id*"
+									},
+									"_postman_previewlanguage": null,
+									"header": null,
+									"cookie": [],
+									"responseTime": null,
+									"body": null
 								}
 							]
 						}
