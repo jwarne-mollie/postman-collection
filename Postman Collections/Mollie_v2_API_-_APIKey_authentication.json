@@ -1979,95 +1979,18 @@
 							},
 							"response": [
 								{
-									"id": "583b5afd-f9f8-49bc-96e9-f3d784b5c71c",
-									"name": "Enable appetiz vouchers",
-									"originalRequest": {
-										"method": "POST",
-										"header": [],
-										"body": {
-											"mode": "raw",
-											"raw": "{\n    \"contractId\":\"abc123\"\n}",
-											"options": {
-												"raw": {
-													"language": "json"
-												}
-											}
-										},
-										"url": "{{apiUrl}}/profiles/me/methods/voucher/issuers/edenred"
-									},
-									"status": "Created",
-									"code": 201,
-									"_postman_previewlanguage": "json",
-									"header": [
-										{
-											"key": "Server",
-											"value": "nginx"
-										},
-										{
-											"key": "Date",
-											"value": "Wed, 19 Jan 2022 12:45:23 GMT"
-										},
-										{
-											"key": "Content-Type",
-											"value": "application/hal+json"
-										},
-										{
-											"key": "Content-Length",
-											"value": "608"
-										},
-										{
-											"key": "X-Robots-Tag",
-											"value": "noindex"
-										},
-										{
-											"key": "Strict-Transport-Security",
-											"value": "max-age=31536000; includeSubDomains; preload"
-										}
-									],
-									"cookie": [],
-									"responseTime": null,
-									"body": "{\n    \"resource\": \"issuer\",\n    \"id\": \"appetiz\",\n    \"name\": \"Appetiz\",\n    \"image\": {\n        \"size1x\": \"https://www.mollie.com/external/icons/voucher-issuers/appetiz.png\",\n        \"size2x\": \"https://www.mollie.com/external/icons/voucher-issuers/appetiz%402x.png\",\n        \"svg\": \"https://www.mollie.com/external/icons/voucher-issuers/appetiz.svg\"\n    },\n    \"status\": \"pending-issuer\",\n    \"contractor\": {\n        \"id\": \"Conecs\",\n        \"name\": \"Conecs\",\n        \"contractId\": \"abc123\"\n    },\n    \"_links\": {\n        \"self\": {\n            \"href\": \"https://api.mollie.com/v2/issuers/appetiz\",\n            \"type\": \"application/hal+json\"\n        },\n        \"documentation\": {\n            \"href\": \"https://docs.mollie.com/reference/v2/profiles-api/enable-voucher-issuer\",\n            \"type\": \"text/html\"\n        }\n    }\n}"
-								},
-								{
-									"id": "3614efee-2ee4-4ded-a87a-e3361fee562c",
-									"name": "Enable festivalkado giftcard payment method",
+									"id": "7b82df86-d477-47a3-90ad-1da93fe2b016",
+									"name": "Enable payment method issuer",
 									"originalRequest": {
 										"method": "POST",
 										"header": [],
 										"url": "{{apiUrl}}/profiles/me/methods/giftcard/issuers/festivalcadeau"
 									},
-									"status": "Created",
-									"code": 201,
-									"_postman_previewlanguage": "json",
-									"header": [
-										{
-											"key": "Server",
-											"value": "nginx"
-										},
-										{
-											"key": "Date",
-											"value": "Wed, 19 Jan 2022 12:41:46 GMT"
-										},
-										{
-											"key": "Content-Type",
-											"value": "application/hal+json"
-										},
-										{
-											"key": "Content-Length",
-											"value": "335"
-										},
-										{
-											"key": "X-Robots-Tag",
-											"value": "noindex"
-										},
-										{
-											"key": "Strict-Transport-Security",
-											"value": "max-age=31536000; includeSubDomains; preload"
-										}
-									],
+									"_postman_previewlanguage": null,
+									"header": null,
 									"cookie": [],
 									"responseTime": null,
-									"body": "{\n    \"resource\": \"issuer\",\n    \"id\": \"festivalcadeau\",\n    \"description\": \"FestivalCadeau Giftcard\",\n    \"status\": \"pending-issuer\",\n    \"_links\": {\n        \"self\": {\n            \"href\": \"https://api.mollie.com/v2/issuer/festivalcadeau\",\n            \"type\": \"application/hal+json\"\n        },\n        \"documentation\": {\n            \"href\": \"https://docs.mollie.com/reference/v2/profiles-api/enable-giftcard-issuer\",\n            \"type\": \"text/html\"\n        }\n    }\n}"
+									"body": null
 								}
 							]
 						},
@@ -2082,74 +2005,7 @@
 								"header": [],
 								"url": "{{apiUrl}}/profiles/me/methods/*methodId*/issuers/*id*"
 							},
-							"response": [
-								{
-									"id": "2989c3d6-f292-46fd-a105-8a2d0fac05bc",
-									"name": "Delete appetiz voucher payment method",
-									"originalRequest": {
-										"method": "DELETE",
-										"header": [],
-										"url": "{{apiUrl}}/profiles/me/methods/voucher/issuers/appetiz"
-									},
-									"status": "No Content",
-									"code": 204,
-									"_postman_previewlanguage": "plain",
-									"header": [
-										{
-											"key": "Server",
-											"value": "nginx"
-										},
-										{
-											"key": "Date",
-											"value": "Wed, 19 Jan 2022 12:46:13 GMT"
-										},
-										{
-											"key": "X-Robots-Tag",
-											"value": "noindex"
-										},
-										{
-											"key": "Strict-Transport-Security",
-											"value": "max-age=31536000; includeSubDomains; preload"
-										}
-									],
-									"cookie": [],
-									"responseTime": null,
-									"body": ""
-								},
-								{
-									"id": "3dbb64ae-d7c3-4e30-8aef-4faff937274d",
-									"name": "Disable festivalkado giftcard payment method",
-									"originalRequest": {
-										"method": "DELETE",
-										"header": [],
-										"url": "{{apiUrl}}/profiles/me/methods/giftcard/issuers/festivalcadeau"
-									},
-									"status": "No Content",
-									"code": 204,
-									"_postman_previewlanguage": "plain",
-									"header": [
-										{
-											"key": "Server",
-											"value": "nginx"
-										},
-										{
-											"key": "Date",
-											"value": "Wed, 19 Jan 2022 12:42:23 GMT"
-										},
-										{
-											"key": "X-Robots-Tag",
-											"value": "noindex"
-										},
-										{
-											"key": "Strict-Transport-Security",
-											"value": "max-age=31536000; includeSubDomains; preload"
-										}
-									],
-									"cookie": [],
-									"responseTime": null,
-									"body": ""
-								}
-							]
+							"response": []
 						}
 					],
 					"id": "d30d73f5-4622-4ef9-9433-aebc3fe0cab1"
