@@ -1975,7 +1975,7 @@
 							"request": {
 								"method": "POST",
 								"header": [],
-								"url": "{{apiUrl}}/profiles/me/methods/voucher/issuers/appetiz"
+								"url": "{{apiUrl}}/profiles/me/methods/*methodId*/issuers/*id*"
 							},
 							"response": [
 								{
