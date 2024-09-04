@@ -2049,7 +2049,66 @@
 								"header": [],
 								"url": "{{apiUrl}}/profiles/me/methods/*methodId*/issuers/*id*"
 							},
-							"response": []
+							"response": [
+								{
+									"id": "e1e36cc6-7136-46fc-b374-f739454f7192",
+									"name": "Disable giftcard",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"contractId\": \"yourcontractid\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": "{{apiUrl}}/profiles/me/methods/giftcard/issuers/*id*"
+									},
+									"_postman_previewlanguage": null,
+									"header": null,
+									"cookie": [],
+									"responseTime": null,
+									"body": null
+								},
+								{
+									"id": "947f453b-2b05-4832-8bd6-aa9ea4ec1683",
+									"name": "Enable voucher Copy",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"contractId\": \"yourcontractid\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": "{{apiUrl}}/profiles/me/methods/voucher/issuers/*id*"
+									},
+									"_postman_previewlanguage": null,
+									"header": null,
+									"cookie": [],
+									"responseTime": null,
+									"body": null
+								}
+							]
 						}
 					],
 					"id": "d30d73f5-4622-4ef9-9433-aebc3fe0cab1"
