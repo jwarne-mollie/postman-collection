@@ -2054,7 +2054,7 @@
 									"id": "e1e36cc6-7136-46fc-b374-f739454f7192",
 									"name": "Disable giftcard",
 									"originalRequest": {
-										"method": "POST",
+										"method": "DELETE",
 										"header": [
 											{
 												"key": "Content-Type",
@@ -2062,15 +2062,6 @@
 												"type": "text"
 											}
 										],
-										"body": {
-											"mode": "raw",
-											"raw": "{\n    \"contractId\": \"yourcontractid\"\n}",
-											"options": {
-												"raw": {
-													"language": "json"
-												}
-											}
-										},
 										"url": "{{apiUrl}}/profiles/me/methods/giftcard/issuers/*id*"
 									},
 									"_postman_previewlanguage": null,
@@ -2081,9 +2072,9 @@
 								},
 								{
 									"id": "947f453b-2b05-4832-8bd6-aa9ea4ec1683",
-									"name": "Enable voucher Copy",
+									"name": "Disable voucher",
 									"originalRequest": {
-										"method": "POST",
+										"method": "DELETE",
 										"header": [
 											{
 												"key": "Content-Type",
@@ -2091,15 +2082,6 @@
 												"type": "text"
 											}
 										],
-										"body": {
-											"mode": "raw",
-											"raw": "{\n    \"contractId\": \"yourcontractid\"\n}",
-											"options": {
-												"raw": {
-													"language": "json"
-												}
-											}
-										},
 										"url": "{{apiUrl}}/profiles/me/methods/voucher/issuers/*id*"
 									},
 									"_postman_previewlanguage": null,
