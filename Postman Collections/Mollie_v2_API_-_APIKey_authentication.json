@@ -1980,11 +1980,55 @@
 							"response": [
 								{
 									"id": "7b82df86-d477-47a3-90ad-1da93fe2b016",
-									"name": "Enable payment method issuer",
+									"name": "Enable giftcard",
 									"originalRequest": {
 										"method": "POST",
-										"header": [],
-										"url": "{{apiUrl}}/profiles/me/methods/giftcard/issuers/festivalcadeau"
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"contractId\": \"yourcontractid\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": "{{apiUrl}}/profiles/me/methods/giftcard/issuers/*id*"
+									},
+									"_postman_previewlanguage": null,
+									"header": null,
+									"cookie": [],
+									"responseTime": null,
+									"body": null
+								},
+								{
+									"id": "3658ff5f-e2d3-4824-8660-5d6d5288682b",
+									"name": "Enable voucher",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"contractId\": \"yourcontractid\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": "{{apiUrl}}/profiles/me/methods/voucher/issuers/*id*"
 									},
 									"_postman_previewlanguage": null,
 									"header": null,
