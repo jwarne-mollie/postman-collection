@@ -1993,7 +1993,7 @@
 												}
 											}
 										},
-										"url": "{{apiUrl}}/profiles/me/methods/voucher/issuers/appetiz"
+										"url": "{{apiUrl}}/profiles/me/methods/voucher/issuers/edenred"
 									},
 									"status": "Created",
 									"code": 201,
@@ -2080,7 +2080,7 @@
 							"request": {
 								"method": "DELETE",
 								"header": [],
-								"url": "{{apiUrl}}/profiles/me/methods/voucher/issuers/appetiz"
+								"url": "{{apiUrl}}/profiles/me/methods/*methodId*/issuers/*id*"
 							},
 							"response": [
 								{
