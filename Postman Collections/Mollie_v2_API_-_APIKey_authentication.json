@@ -14,17 +14,20 @@
 					"item": [
 						{
 							"name": "Create payment",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"const response = pm.response.json();",
+											"pm.collectionVariables.set(\"paymentId\", response.id);"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
 							"request": {
-								"auth": {
-									"type": "bearer",
-									"bearer": [
-										{
-											"key": "token",
-											"value": "{{access_token}}",
-											"type": "string"
-										}
-									]
-								},
 								"method": "POST",
 								"header": [],
 								"body": {
@@ -600,7 +603,8 @@
 										"exec": [
 											""
 										],
-										"type": "text/javascript"
+										"type": "text/javascript",
+										"packages": {}
 									}
 								}
 							],
@@ -608,13 +612,13 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "{{apiUrl}}/payments/*id*",
+									"raw": "{{apiUrl}}/payments/{{paymentId}}",
 									"host": [
 										"{{apiUrl}}"
 									],
 									"path": [
 										"payments",
-										"*id*"
+										"{{paymentId}}"
 									]
 								}
 							},
@@ -878,13 +882,13 @@
 									}
 								},
 								"url": {
-									"raw": "{{apiUrl}}/payments/tr_FE9UrEs9zU",
+									"raw": "{{apiUrl}}/payments/{{paymentId}}",
 									"host": [
 										"{{apiUrl}}"
 									],
 									"path": [
 										"payments",
-										"tr_FE9UrEs9zU"
+										"{{paymentId}}"
 									]
 								}
 							},
@@ -1014,7 +1018,8 @@
 										"exec": [
 											""
 										],
-										"type": "text/javascript"
+										"type": "text/javascript",
+										"packages": {}
 									}
 								}
 							],
@@ -1031,13 +1036,13 @@
 									}
 								},
 								"url": {
-									"raw": "{{apiUrl}}/payments/tr_FE9UrEs9zU",
+									"raw": "{{apiUrl}}/payments/{{paymentId}}",
 									"host": [
 										"{{apiUrl}}"
 									],
 									"path": [
 										"payments",
-										"tr_FE9UrEs9zU"
+										"{{paymentId}}"
 									]
 								}
 							},
@@ -1052,7 +1057,8 @@
 										"exec": [
 											""
 										],
-										"type": "text/javascript"
+										"type": "text/javascript",
+										"packages": {}
 									}
 								},
 								{
@@ -1060,9 +1066,10 @@
 									"script": {
 										"exec": [
 											"const response = pm.response.json();",
-											"pm.globals.set(\"nextPayments\", response._links.next.href);"
+											"pm.collectionVariables.set(\"nextPayments\", response._links.next.href);"
 										],
-										"type": "text/javascript"
+										"type": "text/javascript",
+										"packages": {}
 									}
 								}
 							],

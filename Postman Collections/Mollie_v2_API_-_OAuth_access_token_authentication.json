@@ -24,6 +24,17 @@
 										"type": "text/javascript",
 										"packages": {}
 									}
+								},
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"const response = pm.response.json();",
+											"pm.collectionVariables.set(\"paymentId\", response.id);"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
 								}
 							],
 							"request": {
@@ -372,7 +383,8 @@
 										"exec": [
 											""
 										],
-										"type": "text/javascript"
+										"type": "text/javascript",
+										"packages": {}
 									}
 								}
 							],
@@ -380,18 +392,19 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "{{apiUrl}}/payments/*id*?testmode=true",
+									"raw": "{{apiUrl}}/payments/{{paymentId}}",
 									"host": [
 										"{{apiUrl}}"
 									],
 									"path": [
 										"payments",
-										"*id*"
+										"{{paymentId}}"
 									],
 									"query": [
 										{
 											"key": "testmode",
-											"value": "true"
+											"value": "true",
+											"disabled": true
 										}
 									]
 								}
@@ -656,7 +669,8 @@
 										"exec": [
 											""
 										],
-										"type": "text/javascript"
+										"type": "text/javascript",
+										"packages": {}
 									}
 								}
 							],
@@ -673,13 +687,13 @@
 									}
 								},
 								"url": {
-									"raw": "{{apiUrl}}/payments/tr_FE9UrEs9zU",
+									"raw": "{{apiUrl}}/payments/{{paymentId}}",
 									"host": [
 										"{{apiUrl}}"
 									],
 									"path": [
 										"payments",
-										"tr_FE9UrEs9zU"
+										"{{paymentId}}"
 									]
 								}
 							},
@@ -809,7 +823,8 @@
 										"exec": [
 											""
 										],
-										"type": "text/javascript"
+										"type": "text/javascript",
+										"packages": {}
 									}
 								}
 							],
@@ -826,13 +841,13 @@
 									}
 								},
 								"url": {
-									"raw": "{{apiUrl}}/payments/*id*",
+									"raw": "{{apiUrl}}/payments/{{paymentId}}",
 									"host": [
 										"{{apiUrl}}"
 									],
 									"path": [
 										"payments",
-										"*id*"
+										"{{paymentId}}"
 									]
 								}
 							},
@@ -847,7 +862,8 @@
 										"exec": [
 											""
 										],
-										"type": "text/javascript"
+										"type": "text/javascript",
+										"packages": {}
 									}
 								},
 								{
@@ -855,9 +871,10 @@
 									"script": {
 										"exec": [
 											"const response = pm.response.json();",
-											"pm.globals.set(\"nextPayments\", response._links.next.href);"
+											"pm.collectionVariables.set(\"nextPayments\", response._links.next.href);"
 										],
-										"type": "text/javascript"
+										"type": "text/javascript",
+										"packages": {}
 									}
 								}
 							],
