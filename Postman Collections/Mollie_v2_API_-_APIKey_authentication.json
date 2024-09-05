@@ -20,7 +20,7 @@
 									"script": {
 										"exec": [
 											"const response = pm.response.json();",
-											"pm.collectionVariables.set(\"paymentId\", response.id);"
+											"pm.environment.set(\"paymentId\", response.id);"
 										],
 										"type": "text/javascript",
 										"packages": {}
@@ -1486,7 +1486,7 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "{{apiUrl}}/methods/all?locale={{locale}}&amount[currency]={{currency}}&amount[value]={{value}}",
+									"raw": "{{apiUrl}}/methods/all?locale={{locale}}&amount[currency]={{currency}}&amount[value]={{value}}&include=issuers&include=pricing",
 									"host": [
 										"{{apiUrl}}"
 									],
@@ -1508,9 +1508,12 @@
 											"value": "{{value}}"
 										},
 										{
-											"key": "",
-											"value": "",
-											"disabled": true
+											"key": "include",
+											"value": "issuers"
+										},
+										{
+											"key": "include",
+											"value": "pricing"
 										}
 									]
 								}
@@ -2160,7 +2163,7 @@
 											}
 										},
 										"url": {
-											"raw": "{{apiUrl}}/profiles/me/methods/giftcard/issuers/*id*",
+											"raw": "{{apiUrl}}/profiles/me/methods/giftcard/issuers/amsterdamimpactgiftcard",
 											"host": [
 												"{{apiUrl}}"
 											],
@@ -2170,7 +2173,7 @@
 												"methods",
 												"giftcard",
 												"issuers",
-												"*id*"
+												"amsterdamimpactgiftcard"
 											]
 										}
 									},
@@ -2200,7 +2203,7 @@
 											}
 										},
 										"url": {
-											"raw": "{{apiUrl}}/profiles/me/methods/voucher/issuers/*id*",
+											"raw": "{{apiUrl}}/profiles/me/methods/voucher/issuers/monizze-cadeau",
 											"host": [
 												"{{apiUrl}}"
 											],
@@ -2210,7 +2213,7 @@
 												"methods",
 												"voucher",
 												"issuers",
-												"*id*"
+												"monizze-cadeau"
 											]
 										}
 									},
@@ -2254,7 +2257,7 @@
 											}
 										],
 										"url": {
-											"raw": "{{apiUrl}}/profiles/me/methods/giftcard/issuers/*id*",
+											"raw": "{{apiUrl}}/profiles/me/methods/giftcard/issuers/amsterdamimpactgiftcard",
 											"host": [
 												"{{apiUrl}}"
 											],
@@ -2264,7 +2267,7 @@
 												"methods",
 												"giftcard",
 												"issuers",
-												"*id*"
+												"amsterdamimpactgiftcard"
 											]
 										}
 									},
@@ -2285,7 +2288,7 @@
 											}
 										],
 										"url": {
-											"raw": "{{apiUrl}}/profiles/me/methods/voucher/issuers/*id*",
+											"raw": "{{apiUrl}}/profiles/me/methods/voucher/issuers/monizze-cadeau",
 											"host": [
 												"{{apiUrl}}"
 											],
@@ -2295,7 +2298,7 @@
 												"methods",
 												"voucher",
 												"issuers",
-												"*id*"
+												"monizze-cadeau"
 											]
 										}
 									},
@@ -2313,6 +2316,19 @@
 					"item": [
 						{
 							"name": "Create payment refund",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"const response = pm.response.json();",
+											"pm.environment.set(\"refundId\", response.id);"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
 							"request": {
 								"method": "POST",
 								"header": [],
@@ -2326,13 +2342,13 @@
 									}
 								},
 								"url": {
-									"raw": "{{apiUrl}}/payments/*paymentId*/refunds",
+									"raw": "{{apiUrl}}/payments/{{paymentId}}/refunds",
 									"host": [
 										"{{apiUrl}}"
 									],
 									"path": [
 										"payments",
-										"*paymentId*",
+										"{{paymentId}}",
 										"refunds"
 									]
 								}
@@ -2404,15 +2420,15 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "{{apiUrl}}/payments/*paymentId*/refunds/*id*",
+									"raw": "{{apiUrl}}/payments/{{paymentId}}/refunds/{{refundId}}",
 									"host": [
 										"{{apiUrl}}"
 									],
 									"path": [
 										"payments",
-										"*paymentId*",
+										"{{paymentId}}",
 										"refunds",
-										"*id*"
+										"{{refundId}}"
 									]
 								}
 							},
@@ -2475,15 +2491,15 @@
 								"method": "DELETE",
 								"header": [],
 								"url": {
-									"raw": "{{apiUrl}}/payments/*paymentId*/refunds/*id*",
+									"raw": "{{apiUrl}}/payments/{{paymentId}}/refunds/{{refundId}}",
 									"host": [
 										"{{apiUrl}}"
 									],
 									"path": [
 										"payments",
-										"*paymentId*",
+										"{{paymentId}}",
 										"refunds",
-										"*id*"
+										"{{refundId}}"
 									]
 								}
 							},
@@ -2538,13 +2554,13 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "{{apiUrl}}/payments/*paymentId*/refunds",
+									"raw": "{{apiUrl}}/payments/{{paymentId}}/refunds",
 									"host": [
 										"{{apiUrl}}"
 									],
 									"path": [
 										"payments",
-										"*paymentId*",
+										"{{paymentId}}",
 										"refunds"
 									]
 								}
@@ -3693,6 +3709,19 @@
 					"item": [
 						{
 							"name": "List Terminals",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"const response = pm.response.json();",
+											"pm.environment.set(\"terminalId\", response._embedded.terminals[0].id);"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
 							"request": {
 								"method": "GET",
 								"header": [],
@@ -3774,13 +3803,13 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "{{apiUrl}}/terminals/*id*",
+									"raw": "{{apiUrl}}/terminals/{{terminalId}}",
 									"host": [
 										"{{apiUrl}}"
 									],
 									"path": [
 										"terminals",
-										"*id*"
+										"{{terminalId}}"
 									]
 								}
 							},
